@@ -1,6 +1,6 @@
 # esperanto-books
 
-_For the English version of this document, [see below.](#angla)
+_For the English version of this document_, [_see below._](#angla)
 
 Ĉi tio estas (Xe)LaTeX-a fontkodo por fari «reproduktajn» kopiojn de iuj el la unuaj libroj pri Esperanto.
 
