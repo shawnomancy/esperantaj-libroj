@@ -8,9 +8,13 @@ _For the English version of this document_, [_see below._](#angla)
 
 Mi provas uzi nur tiparojn, kiuj estas libere haveblaj, dum ankoraŭ havante la «sento» de la originalaj eldonoj.  Vidu la [tiparojn malsupren.](#tiparoj)
 
+### Skanitaj Originalaj
+
+La originalaj verkoj estas videbla ĉe [la Zamenhof-paĝo de la Kolekto por Planlingvoj](https://www.onb.ac.at/eo/bibliothek/sammlungen/kolekto-por-planlingvoj/digitaj-dokumentoj/ludwik-l-zamenhof) de la Aŭstria Nacia Librejo.
+
 ### Specialaj Dankoj
 
-Mi volas danki Einstein dos Santos, kiu min bonkore permesis komenci el via pli frua fontkodo por la _Fundamenta Krestomatio_.
+Mi volas danki Einstein dos Santos, kiu min bonkore permesis komenci el via pli frua fontkodo por la _Fundamenta Krestomatio_.  Kaj Gene Keyes, kiu min bonkore permesis komenci el via PDF de _Unua Libro_.
 
 Finfine mi volas danki miajn Esperanto-lernantajn amikojn, al kiuj, kaj al la memoro de D-ro Zamenhof, la aranĝaĵoj estas dediĉitaj.
 
@@ -24,9 +28,13 @@ Because I love Esperanto, but also the typography of the 19th and early 20th cen
 
 I have tried to use only fonts which are freely available, while still having the "feel" of the original editions.  See the [fonts below.](#tiparoj)
 
+### Scanned Originals
+
+The original works are viewable at [the Zamenhof page at the Collection for Planned Languages](https://www.onb.ac.at/eo/bibliothek/sammlungen/kolekto-por-planlingvoj/digitaj-dokumentoj/ludwik-l-zamenhof) of the Austrian National Library.
+
 ### Special Thanks
 
-I want to thank Einstein dos Santos, who kindly allowed me to start from his earlier source code for the _Fundamental Chrestomathy_.
+I want to thank Einstein dos Santos, who kindly allowed me to start from his earlier source code for the _Fundamenta Krestomatio_. And Gene Keyes, who kindly allowed me to start from his PDF of _Unua Libro_.
 
 Finally I want to thank my Esperanto-learning friends, to whom, and to the memory of Dr. Zamenhof, these versions are dedicated.
 
