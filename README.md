@@ -33,15 +33,33 @@ Finally I want to thank my Esperanto-learning friends, to whom, and to the memor
 <a name="tiparoj"></a>
 ## Bezonataj Tiparoj / Required Fonts
 
-Ricivebla el (_available from_) Google Fonts:
+Pri la tiparoj kiuj ne estas liberaj, mi ne povus trovi bonajn liberajn imitojn de la originalaj.  Se mi trovus tiajn tiparojn, mi ŝanĝos tiun deponejon por uzi ilin. (_About the fonts which are not free, I've been unable to find good free imitations of the originals.  If I find such fonts, I will update the repository to use them._)
+
+Google Fonts:
 
 * Old Standard TT
 * Cardo
+* Smokum
+* FjallaOne
 
-Ricivebla el (_available from_) (https://github.com/liberationfonts/liberation-fonts):
+https://github.com/liberationfonts/liberation-fonts:
 
 * Liberation Sans
+
+Font Squirrel:
+
+* Latinia
+
+DaFont.com:
+
+* K22 Monastic
+* Bosox
 
 Enhavita en via TeX-distribuo aŭ el CTAN (_included in your TeX distribution or at CTAN_):
 
 * TeX Gyre Schola
+
+Enhavita en MacOS:
+
+* Didot
+* Copperplate Light
