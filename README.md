@@ -1,4 +1,4 @@
-# esperanto-books
+# Esperantaj Libroj
 
 _For the English version of this document_, [_see below._](#angla)
 
@@ -8,11 +8,13 @@ _For the English version of this document_, [_see below._](#angla)
 
 Mi provas uzi nur tiparojn, kiuj estas libere haveblaj, dum ankoraŭ havante la «sento» de la originalaj eldonoj.  Vidu la [tiparojn malsupren.](#tiparoj)
 
-## Specialaj Dankoj
+### Specialaj Dankoj
 
 Mi volas danki Einstein dos Santos, kiu min bonkore permesis komenci el via pli frua fontkodo por la _Fundamenta Krestomatio_.
 
 Finfine mi volas danki miajn Esperanto-lernantajn amikojn, al kiuj, kaj al la memoro de D-ro Zamenhof, la aranĝaĵoj estas dediĉitaj.
+
+# Esperanto Books
 
 <a name="angla"></a>
 
@@ -22,14 +24,14 @@ Because I love Esperanto, but also the typography of the 19th and early 20th cen
 
 I have tried to use only fonts which are freely available, while still having the "feel" of the original editions.  See the [fonts below.](#tiparoj)
 
-## Special Thanks
+### Special Thanks
 
 I want to thank Einstein dos Santos, who kindly allowed me to start from his earlier source code for the _Fundamental Chrestomathy_.
 
 Finally I want to thank my Esperanto-learning friends, to whom, and to the memory of Dr. Zamenhof, these versions are dedicated.
 
 <a name="tiparoj"></a>
-### Bezonataj Tiparoj / Required Fonts
+## Bezonataj Tiparoj / Required Fonts
 
 Ricivebla el (_available from_) Google Fonts:
 
