@@ -62,6 +62,7 @@ DaFont.com:
 
 * K22 Monastic
 * Bosox
+* Mk Latino
 
 Enhavita en via TeX-distribuo aŭ el CTAN (_included in your TeX distribution or at CTAN_):
 
