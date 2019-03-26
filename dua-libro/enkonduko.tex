@@ -1,0 +1,162 @@
+%
+% Enkonduko por Dua Libro
+%
+
+
+
+% easily define paper geometry
+%
+\usepackage[a5paper,margin=2cm]{geometry}
+
+% Creative Commons icons
+%
+\usepackage{ccicons}
+
+% precision underlining
+% 
+\usepackage{soul}
+
+% datoprezento angla kaj esperanta
+%
+\def\hodiau{\number\day a~de~\ifcase\month\or januaro\or februaro\or marto\or aprilo\or majo\or junio\or julio\or aŭgusto\or septembro\or oktobro\or novembro\or decembro\fi, \number\year}
+
+% need German-style quotes
+%
+\usepackage{babel}  
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+% better verse environment for "Kanto de studentoj"
+%
+\usepackage{verse}
+
+% for ornaments like the fancy section lines
+%
+\usepackage{pgfornament} 
+
+% to set line spacing easily
+%
+\usepackage{setspace} 
+
+% nice shadows on some decorative fonts
+%
+\usepackage{shadowtext}
+\shadowoffset{1pt}
+
+% calculations
+%
+\usepackage{calc}
+
+% to stack the "R" in "DR." on title page
+%
+\usepackage{stackengine}  
+
+% the classic pointer finger which would scream "1800s" if it had a mouth
+%
+\usepackage{dingbat}
+
+% allows the morpheme stroke to be relatively sized by its context
+%
+\usepackage{relsize} 
+
+% indent the first paragraph of each section just like all the others
+%
+\usepackage{indentfirst} 
+
+% any URLs in the colophon
+%
+\usepackage{hyperref}
+
+% the xelatex logo in the colophon
+%
+\usepackage{dtk-logos}
+
+% fontspec -- for most of the nice fonts
+%
+\usepackage{fontspec}
+
+\setmainfont{Old Standard TT}
+\newfontfamily\latino{MkLatinoPlain}[LetterSpace=20]
+\newfontfamily\latinia{Latinia}[LetterSpace=20]
+\newfontfamily\cowboyfont{Smokum}[LetterSpace=12]
+\newfontfamily\sansfont{Liberation Sans}[LetterSpace=5]
+\newfontfamily\didotfont{Didot}
+\newfontfamily\copperfont{Copperplate Light}[LetterSpace=10]
+\newfontfamily\csfont{TeX Gyre Schola}
+
+% titlesec -- better section/chapter headings
+%
+% memoru:
+% titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+%
+\usepackage[compact,center]{titlesec}
+\titlespacing*{\chapter}{0pt}{6em}{0pt}
+\renewcommand{\thesection}{\arabic{section}}
+\titleformat{\section}[display]{\centering\large\bf}{}{0pt}{\scalebox{2}[1]}
+\titlespacing{\section}{0pt}{1em}{1em}
+
+% fancy page headers, that is, in imitation of the original
+%
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+
+\fancyhf{}
+
+% remove the rule at top of page
+%
+\renewcommand{\headrulewidth}{0pt}
+
+% this bit removes the page number from the chapter start page
+%
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyhf{}%
+}
+
+% star lines in poems
+% 
+\newcommand{\pstars}{%
+\hspace*{\fill} * \hspace{3em} \raisebox{-1em}{*} \hspace{3em} * \hspace*{\fill}}
+
+% draws the "kajero" box on the title page
+%
+\usepackage{textcomp}
+\newcommand{\kajerobox}{%
+\begin{tikzpicture}[every node/.style={inner sep=0pt}]
+\node[align=center](Text){\scalebox{0.5}[1]{\huge{\copperfont{KAJERO}} {\LARGE \textnumero} \copperfont 1.}};
+\coordinate[shift={(-0.1cm,0.1cm)}](A) at (Text.north west);
+\coordinate[shift={(0.1cm,0.1cm)}](B) at (Text.north east);
+\coordinate[shift={(0.1cm,-0.1cm)}](C) at (Text.north east);
+\coordinate[shift={(0.3cm,-0.1cm)}](D) at (Text.north east);
+\coordinate[shift={(0.3cm,0.1cm)}](E) at (Text.south east);
+\coordinate[shift={(0.1cm,0.1cm)}](F) at (Text.south east);
+\coordinate[shift={(0.1cm,-0.1cm)}](G) at (Text.south east);
+\coordinate[shift={(-0.1cm,-0.1cm)}](H) at (Text.south west);
+\coordinate[shift={(-0.1cm,0.1cm)}](I) at (Text.south west);
+\coordinate[shift={(-0.3cm,0.1cm)}](J) at (Text.south west);
+\coordinate[shift={(-0.3cm,-0.1cm)}](K) at (Text.north west);
+\coordinate[shift={(-0.1cm,-0.1cm)}](L) at (Text.north west);
+\draw[very thick](A) -- (B) -- (C) -- (D) -- (E) -- (F) -- (G) -- (H) -- (I) -- (J) -- (K) -- (L) -- cycle;
+\filldraw(A) circle [radius=1.25pt];
+\filldraw(B) circle [radius=1.25pt];
+\filldraw(D) circle [radius=1.25pt];
+\filldraw(E) circle [radius=1.25pt];
+\filldraw(G) circle [radius=1.25pt];
+\filldraw(H) circle [radius=1.25pt];
+\filldraw(J) circle [radius=1.25pt];
+\filldraw(K) circle [radius=1.25pt];
+\end{tikzpicture}}
+
+% the command for the morpheme-separation stroke
+%
+\renewcommand{\,}{\raisebox{-1.1ex}{\relsize{-0.5}{\textquotesingle}}}
+
+% displays the "RO." in "DRO." on the title page raised and underlined
+%
+\newcommand{\doktororo}{\setul{3pt}{.4pt}\setbox0=\hbox{X}\belowbaseline[-1.2ex]{\ul{\small RO}}}
+
+% litera spaco
+%
+\sodef\spaceout{}{.2em}{0.6em}{0pt}
+\sodef\spaceoutmed{}{.1em}{0.5em}{0pt}
