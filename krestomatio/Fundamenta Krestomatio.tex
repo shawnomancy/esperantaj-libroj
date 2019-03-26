@@ -1,0 +1,610 @@
+% Fundamenta Krestomatio de la lingvo Esperanto 
+% (el la 2-a eldono)
+%
+% de D-ro L. L. ZAMENHOF kaj aliaj aŭtoroj
+%
+% XeLaTeX-a aranĝaĵo de Shawn C. KNIGHT, 2019
+%
+% This work is licensed under a Creative Commons 
+% Attribution-NonCommercial-ShareAlike 4.0 International License.
+% The original work by Dr. Zamenhof is in the public domain.
+%
+% Ĉi tiu verko estas permesita per Creative Commons 
+% Attribution-NonCommercial-ShareAlike 4.0 Internacia Permesilo.
+% La originala verko de D-ro Zamenhof estas senkopirajta.
+%
+\documentclass[a5paper,11pt,openany,twoside]{book}
+\input{enkonduko.tex}
+
+% versionombro
+\newcommand{\laversio}{0.8}
+
+%
+% komenco
+%
+\begin{document}
+\frontmatter
+
+%
+% plejeta ĉefpago
+%
+\vspace*{\fill}
+\begin{center}
+\nicefont
+ {\LARGE FUNDAMENTA KRESTOMATIO}\\[0.8cm]
+ {\large \spaceoutmed{DE LA LINGVO}}\\[0.8cm]
+ {\scalebox{3}{\spaceout{ESPERANTO}}}
+\end{center}
+\vspace*{\fill}
+\cleardoublepage
+
+%
+% ornama titolpaĝo
+%
+\thispagestyle{empty}
+\begin{center}
+ \begin{figure}[!ht]
+ \centering \includegraphics[width=0.9\textwidth]{terglobo.png}
+ \end{figure}
+ \nicefont
+ 
+ {\large \spaceoutmed{L. ZAMENHOF}}
+
+ \rule{13mm}{0.4pt}\\[1cm]
+
+ {\LARGE FUNDAMENTA KRESTOMATIO}\\[0.8cm]
+ {\spaceoutmed{DE LA LINGVO}}\\[0.8cm]
+ {\scalebox{3}{\spaceout{ESPERANTO}}}
+
+ \vspace*{\stretch{1}}
+
+ \rule[0.5ex]{13mm}{0.4pt} \\
+ {\small \spaceoutmed{DUA ELDONO}}\\
+ \rule[0.7ex]{13mm}{0.4pt}
+
+ \vspace*{\stretch{1}}
+
+ \csfont {\small
+{\footnotesize FRANCUJO.} — HACHETTE et C\textsuperscript{ie}, {\it PARIS.} \\
+\rule[0.9ex]{13mm}{0.4pt} \\
+{\footnotesize ANGLUJO.} – « REVIEW of REVIEWS », {\footnotesize\it LONDON} \\
+{\footnotesize DANUJO.} — ANDR.-FRED. HÖST \& SÖN, {\footnotesize\it KJOBENHAVN.} \\
+{\footnotesize GERMANUJO.} — MÖLLER \& BOREL, {\footnotesize\it BERLIN.} \\
+{\footnotesize HISPANUJO.} — J. ESPASA, {\footnotesize\it BARCELONA.} \\
+{\footnotesize ITALUJO.} — RAFFAELO GIUSTI, {\footnotesize\it LIVORNO.} \\
+{\footnotesize POLUJO.} — M. ARCT, {\footnotesize\it WARSZAWA.} \\
+{\footnotesize SVEDUJO.} — ESPERANTOFÖRENING, {\footnotesize\it STOCKHOLM.} 
+}
+
+\end{center}
+ 
+\newpage
+
+%
+% Dr. Zamenhof's portrait
+%
+\thispagestyle{empty}
+\begin{center}
+ \vspace*{\stretch{1}}
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.15]{Zamenhof}
+\end{figure}
+\vspace*{0.5cm}
+\nicefont
+{\LARGE Lazaro Ludoviko ZAMENHOF} \\[1ex]
+{\large Aŭtoro de la lingvo «Esperanto»} \\[1ex]
+{\small (la 15-a de Decembro 1859 --- la 14-a de Aprilo 1917)}
+ \vspace*{\stretch{1}}
+\end{center}
+\newpage
+
+%
+% TOC (ho Dio ...)
+%
+\input{enhavo.tex}
+
+%
+% Antaŭparolo
+%
+\chapter*{Anta\u uparolo}
+\thispagestyle{empty}
+\fancyhead[LE,RO]{\footnotesize\thepage}
+\fancyhead[CE]{\footnotesize\leftmark}
+\fancyhead[CO]{\footnotesize\rightmark}
+\markboth{FUNDAMENTA KRESTOMATIO.}{ANTAŬPAROLO.}
+\label{antau}
+\input{001_antauxparolo.tex}
+
+%
+% Ekzercoj
+%
+\mainmatter
+\titleformat{\chapter}[display]{\filcenter\Large}{\vspace*{-4em}\narrow{\huge{\textbf{FUNDAMENTA KRESTOMATIO}}}\\\rule{\textwidth}{0.4pt}\\[2cm]\thechapter}{1ex}{\MakeUppercase}[{\rule{13mm}{0.4pt}}]
+\chapter{Ekzercoj}
+\markboth{FUNDAMENTA KRESTOMATIO.}{EKZERCOJ.}
+\label{ekzercoj}
+\input{002_ekzercoj.tex}
+
+%
+% Fabeloj kaj Legendoj
+%
+\titleformat{\chapter}[display]{\filcenter\Large}{\thechapter}{1ex}{\MakeUppercase}[{\rule{13mm}{0.4pt}}]
+\chapter{Fabeloj kaj Legendoj}
+\markboth{FUNDAMENTA KRESTOMATIO.}{FABELO KAJ LEGENDOJ.}
+\section{La novaj vestoj de la re\^go}
+\label{novajvestoj}
+\input{003_la_novaj_vestoj_de_la_regxo}
+
+\section{Aleksandro Macedona}
+\label{aleksandro}
+\input{004_aleksandro_macedona.tex}
+
+\section{Kiu estas la plej bona amiko de la viro?}
+\label{plejbona}
+\input{005_kiu_estas_la_plej_bona_amiko_de_la_viro.tex}
+
+\section{La deveno de la virino}
+\label{deveno}
+\input{006_la_deveno_de_la_virino.tex}
+
+\section{La naski\^go de la tabako}
+\label{tabako}
+\input{007_la_naskigxo_de_la_tabako.tex}
+
+\section{Karagara}
+\label{karagara}
+\input{008_karagara.tex}
+
+\section{La virineto de maro}
+\label{virineto}
+\input{009_la_virineto_de_maro.tex}
+
+%
+% Anekdotoj
+%
+\chapter{Anekdotoj}
+\markboth{FUNDAMENTA KRESTOMATIO.}{ANEKDOTOJ.}
+\label{anekdotoj}
+\input{010_anekdotoj.tex}
+
+%
+% Rakontoj
+%
+\chapter{Rakontoj}
+\markboth{FUNDAMENTA KRESTOMATIO.}{RAKONTOJ.}
+\section{Nokto}
+\label{nokto}
+\input{011_nokto.tex}
+
+\section{La hejmo de la metiisto}
+\label{metiisto}
+\input{012_la_hejmo_de_la_metiisto.tex}
+
+\section{La forgesita pipo}
+\label{pipo}
+\input{013_la_forgesita_pipo.tex}
+
+\section{Arturo}
+\label{arturo}
+\input{014_arturo.tex}
+
+\newpage % next section header comes up orphaned otherwise
+
+\section{La nigra virino}
+\label{nigra}
+\input{015_la_nigra_virino.tex}
+
+\section{La karaj braceletoj}
+\label{braceletoj}
+\input{016_la_karaj_braceletoj.tex}
+
+\section{Nur unu vorton!}
+\label{unuvorton}
+\input{017_nur_unu_vorton.tex}
+
+\section{La porcio da glacia\^{\j}o}
+\label{porcio}
+\input{018_la_porcio_da_glaciajxo.tex}
+
+%
+% El la Vivo kaj Sciencoj
+%
+\chapter{El la Vivo kaj Sciencoj}
+\markboth{FUNDAMENTA KRESTOMATIO.}{EL LA VIVO KAJ SCIENCOJ.}
+\section{Bagateloj}
+\label{bagateloj}
+\input{019_bagateloj.tex}
+
+\section{Fingra kalendaro}
+\label{fingra}
+\input{020_fingra_kalendaro.tex}
+
+\section{El la po\^sto}
+\label{posxto}
+\input{021_el_la_posxto.tex}
+
+\section{La lo\^gejoj de la termitoj}
+\label{termitoj}
+\input{022_la_logxejoj_de_la_termitoj.tex}
+
+\section{Korespondado komerca}
+\label{komerca}
+\input{023_korespondado_komerca.tex}
+
+\section{Kronika katara konjunktivito}
+\label{kronika}
+\input{024_kronika_katara_konjunktivito.tex}
+
+\section{La sunhorlo\^go en Dijon}
+\label{dijon}
+\input{025_la_sunhorlogxo_en_dijon.tex}
+
+%
+% Artikoloj pri Esperanto
+%
+\chapter{Artikoloj pri Esperanto}
+\markboth{FUNDAMENTA KRESTOMATIO.}{ARTIKOLOJ PRI ESPERANTO.}
+\section{El la unua libro de la lingvo Esperanto}
+\label{unualibro}
+\input{026_el_la_unua_libro_de_la_lingvo_esperanto.tex}
+
+\section{Plena gramatiko de Esperanto}
+\label{plena}
+\input{027_plena_gramatiko_de_esperanto.tex}
+
+\section[Al la historio de la provoj de lingvoj]{Al la historio de la provoj
+de lingvoj tutmondaj de Leibnitz \^gis la  nuna tempo}
+\label{leibnitz}
+\input{028_al_la_historio__la_nuna_tempo.tex}
+
+\section[Esenco kaj estonteco de la ideo de lingvo]{Esenco kaj estonteco de
+la ideo de lingvo internacia}
+\label{esenco}
+\input{029_esenco_kaj__lingvo_internacia.tex}
+
+%
+% Poezio
+%
+\chapter{Poezio}
+\markboth{FUNDAMENTA KRESTOMATIO.}{POEZIO.}
+\addcontentsline{toc}{section}{L. Zamenhof}
+
+\subsection{La espero}
+\label{laespero}
+\input{030_la_espero.tex}
+
+\subsection{La vojo}
+\label{lavojo}
+\input{031_la_vojo.tex}
+
+\subsection{Al la fratoj}
+\label{allafratoj}
+\input{032_al_la_fratoj.tex}
+
+\subsection{Mia penso}
+\label{miapenso}
+\input{033_mia_penso.tex}
+
+\subsection{Ho mia kor'}
+\label{homiakor}
+\input{034_ho_mia_kor.tex}
+
+\subsection{La vojevodo}
+\label{vojevodo}
+\input{035_la_vojevodo.tex}
+
+\subsection{La rozeto}
+\label{rozeto}
+\input{036_la_rozeto.tex}
+
+\subsection{En nord' unu pino\dots}
+\label{unupino}
+\input{037_en_nord_unu_pino.tex}
+
+\subsection{En son\^go\dots}
+\label{songxo}
+\input{038_en_songxo.tex}
+
+\subsection{Lorelej'}
+\label{lorelej}
+\input{039_lorelej.tex}
+
+\subsection{Kanto de studentoj}
+\label{studentoj}
+\input{040_kanto_de_studentoj.tex}
+
+\subsection{Al la re\^go}
+\label{regxo}
+\input{041_al_la_regxo.tex}
+
+\subsection{Nokta kanto de soldato}
+\label{soldato}
+\input{042_nokta_kanto_de_soldato.tex}
+
+\subsection{Kanto de l' ligo}
+\label{ligo}
+\input{043_kanto_de_l_ligo.tex}
+
+\subsection{La kapelo}
+\label{kapelo}
+\input{044_la_kapelo.tex}
+
+\subsection{La gaja migranto}
+\label{migranto}
+\input{045_la_gaja_migranto.tex}
+
+\subsection{La vojo}
+\label{lavojo2}
+\input{046_la_vojo.tex}
+
+\addcontentsline{toc}{section}{Léo Belmont}
+
+\subsection{Nokt' en la koro}
+\label{noktenlakoro}
+\input{047_nokto_en_la_koro.tex}
+
+\subsection{Al brusto, al min\dots}
+\label{albrusto}
+\input{048_al_brusto_al_min.tex}
+
+\addcontentsline{toc}{section}{V. Devjatnin}
+
+\subsection{Printempo}
+\label{printempo}
+\input{049_printempo.tex}
+
+\subsection{\^Sipeto}
+\label{sxipeto}
+\input{050_sxipeto.tex}
+
+\subsection{Sciuro kaj papago}
+\label{sciuro}
+\input{051_sciuro_kaj_papago.tex}
+
+\subsection{An\^gelo}
+\label{angxelo}
+\input{052_angxelo.tex}
+
+\subsection{Husaro}
+\label{husaro}
+\input{053_husaro.tex}
+
+\subsection{Infano de zorgo}
+\label{infano}
+\input{054_infano_de_zorgo.tex}
+
+\subsection{Espero}
+\label{espero}
+\input{055_espero.tex}
+
+\subsection{Garantio}
+\label{garantio}
+\input{056_garantio.tex}
+
+\vspace*{-5ex} % try to get at least two lines of next poem onto this page ...
+
+\addcontentsline{toc}{section}{A. Dombrowski}
+
+\subsection{Mia mizero}
+\label{mizero}
+\input{057_mia_mizero.tex}
+
+\subsection{Nova kanto}
+\label{nova}
+\input{058_nova_kanto.tex}
+
+\subsection{La malliberulo}
+\label{malliberulo}
+\input{059_la_malliberulo.tex}
+
+\addcontentsline{toc}{section}{M. Goldberg}
+\subsection{La turo babilona}
+\label{turo}
+\input{060_la_turo_babilona.tex}
+\subsection{Nova Dio}
+\label{novadio}
+\input{061_nova_dio.tex}
+
+\newpage % necessary here, sadly
+
+\subsection{Cigno, ezoko kaj kankro}
+\label{cigno}
+\input{062_cigno_ezoko_kaj_kankro.tex}
+
+\newpage % ugh
+
+\addcontentsline{toc}{section}{A. Grabowski}
+\subsection{Tri Budrys'oj}
+\label{tri}
+\input{063_tri_budrysoj.tex}
+
+\vspace*{-5ex} %
+
+\subsection{Reva\^{\j}o}
+\label{revajxo}
+\input{064_revajxo.tex}
+
+\vspace*{-5ex} %
+
+\subsection{Excelsior}
+\label{excelsior}
+\input{065_excelsior.tex}
+\subsection{La pluva tago}
+\label{pluva}
+\input{066_la_pluva_tago.tex}
+\subsection{La sago kaj la kanto}
+\label{sago}
+\input{067_la_sago_kaj_la_kanto.tex}
+\subsection{Sonoriloj de vespero}
+\label{sonoriloj}
+\input{068_sonoriloj_de_vespero.tex}
+
+\addcontentsline{toc}{section}{E. Haller}
+\subsection{Mi rakontis}
+\label{rakontis}
+\input{069_mi_rakontis.tex} % had to add newpage inside this
+
+\vspace*{-5ex} %
+
+\addcontentsline{toc}{section}{G. Janowski}
+\subsection{Mi eliras}
+\label{eliras}
+\input{070_mi_eliras.tex}
+
+\addcontentsline{toc}{section}{D. Jegorov}
+\subsection{A\u utuno}
+\label{auxtuno}
+\input{071_auxtuno.tex}
+
+\addcontentsline{toc}{section}{F. de Kanalo\^s\^sy-Lefler}
+\subsection{Ku\^sas somero}
+\label{somero}
+\input{072_kusxas_somero.tex}
+
+\addcontentsline{toc}{section}{A. Kofman}
+\subsection{Filino de Iftah}
+\label{filino}
+\input{073_filino_de_iftah.tex}
+\subsection{La sklavo\^sipo}
+\label{sklavo}
+\input{074_la_sklavosxipo.tex}
+
+\addcontentsline{toc}{section}{V. Langlet}
+\subsection{Al la memoro de J\'ozef Wasniewski}
+\label{memoro}
+\input{075_al_la_memoro_de_jozef_wasniewski.tex}
+
+\addcontentsline{toc}{section}{R. Libeks}
+\subsection{Latva popola kanto}
+\label{latva}
+\input{076_latva_popola_kanto.tex}
+
+\addcontentsline{toc}{section}{I. Lojko}
+\subsection{Malgrand'-rusa kanteto}
+\label{malgrand}
+\input{077_malgrand-rusa_kanteto.tex}
+\subsection{Profeto}
+\label{profeto}
+\input{078_profeto.tex}
+
+\vspace*{-5ex} %
+
+\addcontentsline{toc}{section}{F. Lorenc}
+\subsection{Ala\u udeto}
+\label{alauxdeto}
+\input{079_alauxdeto.tex}
+
+\vspace*{-5ex} %
+
+\addcontentsline{toc}{section}{A. Naumann}
+\subsection{Mi amis vin}
+\label{miamasvin}
+\input{080_mi_amis_vin.tex}
+\subsection{Printempo venos}
+\label{printempovenos}
+\input{081_printempo_venos.tex}
+
+\addcontentsline{toc}{section}{Poeteto}
+\subsection{La \^Caso}
+\label{cxaso}
+\input{082_la_cxaso.tex}
+
+\addcontentsline{toc}{section}{I. Seleznet}
+\subsection{Kanto}
+\label{kanto}
+\input{083_kanto.tex}
+\subsection{Ne ripro\^cu la sorton}
+\label{riprocxu}
+\input{084_ne_riprocxu_la_sorton.tex}
+\subsection{Revo}
+\label{revo}
+\input{085_revo.tex}
+
+\addcontentsline{toc}{section}{E. Smetanka}
+\subsection{La poeto}
+\label{poeto}
+\input{086_la_poeto.tex}
+
+\addcontentsline{toc}{section}{L. Sokolov}
+\subsection{La velo}
+\label{velo}
+\input{087_la_velo.tex}
+
+\addcontentsline{toc}{section}{M. Solovjev}
+\subsection{Plendo}
+\label{plendo}
+\input{088_plendo.tex}
+
+\vspace*{-5ex} %
+
+\subsection{Tri palmoj}
+\label{palmoj}
+\input{089_tri_palmoj.tex}
+
+\addcontentsline{toc}{section}{K. Svanbom}
+\subsection{La\u u sveda melodio}
+\label{sveda}
+\input{090_laux_sveda_melodio.tex}
+
+\addcontentsline{toc}{section}{S. \^Satunovski}
+\subsection{Ne diru}
+\label{nediru}
+\input{091_ne_diru.tex}
+
+\addcontentsline{toc}{section}{W. Waher}
+\subsection{Spirita \^Sipo}
+\label{spirita}
+\input{092_spirita_sxipo.tex}
+
+\addcontentsline{toc}{section}{J. Wasniewski}
+\subsection{El la paperujo de miaj fabloj}
+\label{paperujo}
+\input{093_el_la_paperujo_de_miaj_fabloj.tex}
+
+\addcontentsline{toc}{section}{E. de Wahl}
+\subsection{\^Ce l' maro}
+\label{maro}
+\input{094_cxe_la_maro.tex}
+
+\addcontentsline{toc}{section}{F. Zamenhof}
+\subsection{Versa\^{\j}o sen fino}
+\label{senfino}
+\input{095_versajxo_sen_fino.tex}
+\subsection{Vizito de la steloj sur la tero}
+\label{vizito}
+\input{096_vizito_de_la_steloj_sur_la_tero.tex}
+
+\addcontentsline{toc}{section}{0. Zeidlitz}
+\subsection{Vespero}
+\label{vespero}
+\input{097_vespero.tex}
+
+\newpage % of course
+
+\addcontentsline{toc}{section}{L. Zamenhof}
+\subsection{El Hamleto}
+\label{hamleto}
+\input{098_el_hamleto.tex}
+
+\addcontentsline{toc}{section}{A. Kofman}
+\subsection{El Iliado}
+\label{iliado}
+\input{099_el_Iliado.tex}
+
+%
+% Aldono
+%
+\chapter{Aldono}
+\section{Pre\^go sub la verda standardo}
+\label{standardo}
+\input{100_aldono.tex}
+
+\newpage
+
+%
+% Komento
+%
+\input{komento.tex}
+
+\end{document}

@@ -1,0 +1,216 @@
+%
+% Enkonduko por la Fundamenta Krestomatio
+%
+
+% ni parolas esperanton ...
+%
+\usepackage[esperanto]{babel} 
+
+% ... kaj la libro estis presita de francoj
+%
+\usepackage{csquotes}
+\DeclareQuoteStyle{esperanto}
+  {\guillemotleft}{\guillemotright}
+  {\guillemotleft}{\guillemotright}
+\MakeOuterQuote{"}
+\setquotestyle{esperanto}
+
+% figuroj kaj matematiko (en la sunhorloĝa artikolo)
+%
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows.meta}
+\usepackage[leqno]{amsmath}
+
+% verso
+%
+\usepackage{verse}
+
+% litera spaco
+%
+\usepackage{soul}
+\sodef\spaceout{}{.2em}{0.6em}{0pt}
+\sodef\spaceoutmed{}{.1em}{0.5em}{0pt}
+\newcommand{\narrow}[1]{\scalebox{0.8}[1]{#1}}
+
+% korespondantoj en "korespondado komerca"
+%
+\newcommand\koresp[1]{
+\begin{flushleft}
+\hspace{2em} #1
+\end{flushleft}
+}
+
+% titoloj 
+%
+\usepackage{titlesec}
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+% memoru:
+% titleformat{command}[shape]{format}{label}{sep}{before-code}{after-code}
+%
+\titleformat{\chapter}[display]{\filcenter\Large}{\thechapter}{1ex}{\MakeUppercase}[{\rule{13mm}{0.4pt}}]
+
+\titleformat{\section}[display]{\filcenter\large}{}{0pt}{\MakeUppercase}
+\titlespacing{\section}{0pt}{1em}{1em}
+
+\titleformat{\subsection}[display]{\filcenter\large}{}{0pt}{\MakeUppercase}
+
+% papergeometrio
+%
+\usepackage{geometry}
+\geometry{a5paper,top=21.5mm,bottom=20mm,left=21.5mm,right=21.5mm,}
+
+%
+% Creative Commons ikonoj
+%
+\usepackage{ccicons}
+
+% datoprezento en mia komento
+%
+\def\hodiau{\number\day a~de~\ifcase\month\or januaro\or februaro\or marto\or aprilo\or majo\or junio\or julio\or aŭgusto\or septembro\or oktobro\or novembro\or decembro\fi, \number\year}
+
+% la krommarĝeno por la unua lineo de ĉiu alineo devus esti kiel la aliaj
+%
+\usepackage{indentfirst} 
+
+% ligiloj, kaj ilia koloro 
+%
+\usepackage{color}
+\definecolor{verde_escuro}{rgb}{0,0.5,0}
+\usepackage[colorlinks,linkcolor=verde_escuro]{hyperref}
+
+% la xelatex-simbolo en mia komento
+%
+\usepackage{dtk-logos}
+
+% por la belaj tiparoj
+%
+\usepackage{fontspec}
+
+% de Google Fonts
+%
+\setmainfont{Old Standard TT}
+\newfontfamily\nicefont{Cardo}
+
+% de CTAN
+%
+\newfontfamily\csfont{TeX Gyre Schola}
+
+% kutimaj
+\newfontfamily\sansfont{Liberation Sans}[LetterSpace=5]
+
+% fancy page headers, that is, in imitation of the original
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\renewcommand\footrule{}
+
+% citations
+%
+\newcommand\cited[1]{%
+\begin{flushright}
+\footnotesize #1
+\end{flushright}}
+
+\newcommand\citsc[1]{\cited{\fsc{#1}}}
+
+% Big delimiters in the demo sentence table
+\usepackage{multirow}
+
+% asterisms
+%
+%
+%     *
+%   *   *
+\newcommand{\aster}{*} % maybe \ding{97} ?
+\newcommand\asterism{
+   \begin{center}
+     \vspace{-1em}
+     \parbox{1in}{ % needed to prevent split across page boundaries
+       \begin{center}
+         \aster\\
+         \aster\hspace{0.6em}\aster
+       \end{center}
+     } %\parbox
+     \vspace{-1em}
+   \end{center}
+ }
+
+%
+% reset footnote counter per page 
+%
+\usepackage{perpage} 
+\MakePerPage{footnote} 
+
+% parolanto, en Hamleto
+%
+\usepackage{ifthen}
+\newcommand\speak[2][]{\makebox[0.7\textwidth]{\footnotesize {\ifthenelse{\equal{#1}{}}{\fsc{#2}}{#2}}}
+
+\vspace*{-0.9em}
+
+}
+
+% spaco en Hamleto
+%
+\newlength{\xxx}
+\newcommand\psp[1]{\settowidth{\xxx}{#1}\hspace{\xxx}}
+
+% teatra direkto
+%
+\newcommand\stg[1]{\makebox[0.8\textwidth][r]{\footnotesize #1}}
+
+% trompaj malgrandaj majuskloj -- bedaŭrinde, Old Standard TT ne havas la verajn :(
+%
+\makeatletter
+\newlength\fake@f
+\newlength\fake@c
+\def\fakesc#1{%
+  \begingroup%
+  \xdef\fake@name{\csname\curr@fontshape/\f@size\endcsname}%
+  \fontsize{\fontdimen8\fake@name}{\baselineskip}\selectfont%
+  \uppercase{#1}%
+  \endgroup%
+}
+\makeatother
+\newcommand\fsc[1]{\fauxschelper#1 \relax\relax}
+\def\fauxschelper#1 #2\relax{%
+  \fauxschelphelp#1\relax\relax%
+  \if\relax#2\relax\else\ \fauxschelper#2\relax\fi%
+}
+\def\Hscale{.83}\def\Vscale{.72}\def\Cscale{1.00}
+\def\fauxschelphelp#1#2\relax{%
+  \ifnum`#1>``\ifnum`#1<`\{\scalebox{\Hscale}[\Vscale]{\uppercase{#1}}\else%
+    \scalebox{\Cscale}[1]{#1}\fi\else\scalebox{\Cscale}[1]{#1}\fi%
+  \ifx\relax#2\relax\else\fauxschelphelp#2\relax\fi}
+
+% forigu la paĝnumero el la unua paĝo de ĉapitro
+%
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyhf{}%
+}
+
+% tabloj
+%
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{siunitx}
+
+% malgranda streko
+%
+\newcommand{\smallrule}{%
+\begin{center}%
+\rule{13mm}{0.4pt}\end{center}}
+
+% La paĝtitoloj ŝanĝiĝas per ĉapitro, ne per sekcio aŭ subsekcio; do, 
+% malpermesu al la (sub)sekcioj, ŝanĝi la paĝtitoloj
+%
+\renewcommand{\sectionmark}[1]{} 
+\renewcommand{\subsectionmark}[1]{}
+
+%
+% Fino de Enkonduko
+%

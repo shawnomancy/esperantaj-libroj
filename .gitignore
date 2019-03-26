@@ -1,0 +1,10 @@
+# ignore .log, .aux. .out files
+#
+*.log
+*.aux
+*.out
+
+# ignore the actual generated PDFs
+#
+*.pdf
+
