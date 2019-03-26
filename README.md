@@ -50,7 +50,7 @@ Google Fonts:
 * Smokum
 * FjallaOne
 
-https://github.com/liberationfonts/liberation-fonts:
+[Liberation Fonts](https://github.com/liberationfonts/liberation-fonts):
 
 * Liberation Sans
 
