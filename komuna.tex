@@ -19,6 +19,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %
+% Verso
+%
+\usepackage{verse}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
 % Tiparoj
 %
 \usepackage{fontspec}
@@ -42,6 +49,9 @@
 
 % el Liberation Fonts
 \newfontfamily\sansfont{Liberation Sans}[LetterSpace=5]
+
+% en TeXlive
+\newfontfamily\csfont{TeX Gyre Schola}
 
 % sans-serif bolds in body text
 \newcommand\inbold[1]{\scalebox{1}[0.8]{\fjallafont{#1}}}
@@ -72,6 +82,8 @@
 % Substrekoj kaj litera spaco
 % 
 \usepackage{soul}
+\sodef\spaceout{}{.2em}{0.6em}{0pt}
+\sodef\spaceoutmed{}{.1em}{0.5em}{0pt}
 
 % Datoprezento
 %

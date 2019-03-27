@@ -1,0 +1,59 @@
+%
+% Enkonduko speciala por Dua Libro
+%
+
+% need German-style quotes
+% 
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+% calculations
+%
+\usepackage{calc}
+
+\newfontfamily\latino{MkLatinoPlain}[LetterSpace=20]
+\newfontfamily\latinia{Latinia}[LetterSpace=20]
+\newfontfamily\cowboyfont{Smokum}[LetterSpace=12]
+
+% titlesec -- better section/chapter headings
+%
+% memoru:
+% titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+%
+\renewcommand{\thesection}{\arabic{section}}
+\titleformat{\section}[display]{\centering\large\bf}{}{0pt}{\scalebox{2}[1]}
+\titlespacing{\section}{0pt}{1em}{1em}
+
+% draws the "kajero" box on the title page
+%
+\usepackage{textcomp}
+\newcommand{\kajerobox}{%
+\begin{tikzpicture}[every node/.style={inner sep=0pt}]
+\node[align=center](Text){\scalebox{0.5}[1]{\huge{\copper{KAJERO}} {\LARGE \textnumero} \copper 1.}};
+\coordinate[shift={(-0.1cm,0.1cm)}](A) at (Text.north west);
+\coordinate[shift={(0.1cm,0.1cm)}](B) at (Text.north east);
+\coordinate[shift={(0.1cm,-0.1cm)}](C) at (Text.north east);
+\coordinate[shift={(0.3cm,-0.1cm)}](D) at (Text.north east);
+\coordinate[shift={(0.3cm,0.1cm)}](E) at (Text.south east);
+\coordinate[shift={(0.1cm,0.1cm)}](F) at (Text.south east);
+\coordinate[shift={(0.1cm,-0.1cm)}](G) at (Text.south east);
+\coordinate[shift={(-0.1cm,-0.1cm)}](H) at (Text.south west);
+\coordinate[shift={(-0.1cm,0.1cm)}](I) at (Text.south west);
+\coordinate[shift={(-0.3cm,0.1cm)}](J) at (Text.south west);
+\coordinate[shift={(-0.3cm,-0.1cm)}](K) at (Text.north west);
+\coordinate[shift={(-0.1cm,-0.1cm)}](L) at (Text.north west);
+\draw[very thick](A) -- (B) -- (C) -- (D) -- (E) -- (F) -- (G) -- (H) -- (I) -- (J) -- (K) -- (L) -- cycle;
+\filldraw(A) circle [radius=1.25pt];
+\filldraw(B) circle [radius=1.25pt];
+\filldraw(D) circle [radius=1.25pt];
+\filldraw(E) circle [radius=1.25pt];
+\filldraw(G) circle [radius=1.25pt];
+\filldraw(H) circle [radius=1.25pt];
+\filldraw(J) circle [radius=1.25pt];
+\filldraw(K) circle [radius=1.25pt];
+\end{tikzpicture}}
+
+% the command for the morpheme-separation stroke 
+% differs from that in Unua Libro
+%
+\renewcommand{\,}{\raisebox{-1.1ex}{\relsize{-0.5}{\textquotesingle}}}
