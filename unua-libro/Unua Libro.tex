@@ -16,7 +16,8 @@
 %
 \documentclass[12pt,twoside]{book}
 
-\input{enkonduko.tex}
+\input{../komuna.tex}
+\input{unua-enkonduko.tex}
 
 % Version number
 \newcommand{\laversio}{0.95}
@@ -37,7 +38,7 @@
 \vspace*{\fill}
 
 \begin{center}
-\scalebox{0.8}[1]{\latinia{\LARGE D\doktoror{} ESPERANTO’S}}
+\scalebox{0.8}[1]{\latinia{\LARGE D\raisebox{0.6ex}{\underline{\didone\small\bf R.}} ESPERANTO’S}}
 
 \scalebox{1}[3]{\didone{\LARGE INTERNATIONAL LANGUAGE,}}
 
@@ -92,7 +93,7 @@
 
 \vspace{5em}
 
-{\small \finger An international language, like every national one, is the property of society, and the author renounces all personal rights in it forever.}
+{\small \leftpointright An international language, like every national one, is the property of society, and the author renounces all personal rights in it forever.}
 
 \vspace{5em}
 
@@ -416,36 +417,33 @@ Author's Address:
 \phantomsection
 \addcontentsline{toc}{section}{Promesoj}
 
-\centering
-{\setlength{\extrarowheight}{2ex}%
+{\centering
+\setlength{\extrarowheight}{2ex}
+
 \begin{tabular}{ccc}
 \promeso{} & & \promeso \\
 \promeso & & \promeso \\
-\end{tabular}}
+\end{tabular}
 
-\centering
-{\setlength{\extrarowheight}{2ex}%
 \begin{tabular}{ccc}
 \nomadreso & & \nomadreso \\
 \nomadreso & & \nomadreso \\
-\end{tabular}}
+\end{tabular}
 
-\centering
-{\setlength{\extrarowheight}{2ex}%
 \begin{tabular}{ccc}
 \promeso & & \promeso \\
 \promeso & & \promeso \\
-\end{tabular}}
+\end{tabular}
 
-\centering
-{\setlength{\extrarowheight}{2ex}%
 \begin{tabular}{ccc}
 \nomadreso & & \nomadreso \\
 \nomadreso & & \nomadreso \\
-\end{tabular}}
+\end{tabular}
+
+} % fino de "centering/extrarowheight" por promesoj
 
 %
-% Grammar
+% Gramatiko
 %
 \cleardoublepage
 \titlespacing*{\chapter}{0pt}{0pt}{0pt}
@@ -570,10 +568,12 @@ All forms of the passive are rendered by the respective forms of the verb \emph{
 
 \sectionline
 
+%
 % Vortaro
 %
 \input{vortaro.tex}
 
+%
 % Komento
 %
 \fancyhead[C]{--- \thepage ---}
@@ -614,25 +614,6 @@ Mi dankas Gene-on KEYES, kies antaŭa PDF de \emph{Unua Libro} estas uzita, kiel
 Shawn KNIGHT (angle elparolata \emph{ŝan najt})\\
 \hodiau}
 
-\clearpage
-\thispagestyle{empty}
-\vspace*{\fill}
-\begin{center}
-Ĉi tiu verko estas permesita per Creative Commons \\
-Attribution-NonCommercial-ShareAlike 4.0 \\
-Internacia Permesilo.
+\input{../license.tex}
 
-La originala verko de D-ro Zamenhof \\
-estas senkopirajta.\\[1ex]
-
-\ccbyncsa\\[1ex]
-
-This work is licensed under a Creative Commons \\
-Attribution-NonCommercial-ShareAlike 4.0 \\
-International License.
-
-The original work by Dr. Zamenhof \\
-is in the public domain.
-\vspace*{\fill}
-\end{center}
 \end{document}

@@ -1,0 +1,223 @@
+%
+% Komuna Enkonduko por Esperantaj Libroj
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Geometrio
+%
+\usepackage[a5paper,margin=2cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 
+% Citilojn kaj plu
+%
+\usepackage[english]{babel}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Tiparoj
+%
+\usepackage{fontspec}
+
+% el Google Fonts
+\setmainfont{Old Standard TT}
+\newfontfamily\cowboyfont{Smokum}[LetterSpace=5]
+\newfontfamily\fjallafont{FjallaOne}
+\newfontfamily\grammarpartsfont{FjallaOne}[LetterSpace=20]
+
+% en MacOS
+\newfontfamily\didone{Didot}
+\newfontfamily\copper{Copperplate Light}[LetterSpace=5]
+
+% el Font Squirrel
+\newfontfamily\latinia{Latinia}
+
+% el dafont
+\newfontfamily\monastic{K22 Monastic}
+\newfontfamily\bosox{Bosox}
+
+% el Liberation Fonts
+\newfontfamily\sansfont{Liberation Sans}[LetterSpace=5]
+
+% sans-serif bolds in body text
+\newcommand\inbold[1]{\scalebox{1}[0.8]{\fjallafont{#1}}}
+
+% Ombroj por ornamoj tiparoj
+\usepackage{shadowtext}
+\shadowoffset{1pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Pliaj simboloj
+%
+
+% Creative Commons ikonoj
+\usepackage{ccicons}
+
+% Por ornamoj kiel la "por angloj" etikedo; beletaj sekcilineoj
+\usepackage{pgfornament} 
+
+% la xelatex-simbolo en la kompostanta komento
+\usepackage{dtk-logos}
+
+% la klasika montra fingro, kiu ekkrius "19a jarcento" se ĝi povus
+\usepackage{dingbat}
+
+%
+% Substrekoj kaj litera spaco
+% 
+\usepackage{soul}
+
+% Datoprezento
+%
+\def\hodiau{\number\day a~de~\ifcase\month\or januaro\or februaro\or marto\or aprilo\or majo\or junio\or julio\or aŭgusto\or septembro\or oktobro\or novembro\or decembro\fi, \number\year}
+
+% interlinea distanco
+\usepackage{setspace} 
+
+% star lines in poems
+% 
+\newcommand{\pstars}{%
+\hspace*{\fill} * \hspace{3em} \raisebox{-1em}{*} \hspace{3em} * \hspace*{\fill}}
+
+% ŝanĝas la grando de la intermorgema signeto por ĝia kunteksto
+%
+\usepackage{relsize} 
+
+% la krommarĝeno por la unua lineo de ĉiu alineo devus esti kiel la aliaj
+%
+\usepackage{indentfirst} 
+
+% la krommarĝeno por unuobla alineo
+%
+\usepackage{changepage}
+
+% horitontala formato kaj pluraj kolonoj por la vortaro
+%
+\usepackage{pdflscape}
+\usepackage{multicol}
+
+% granda longa tablo (la "mi ne scias ..." analizo)
+%
+\usepackage{longtable}
+
+% tabularx helpos meti la Promesoj, kaj difinas la larĝeco de niaj tabloj
+% 
+\usepackage{tabularx}
+
+% jen kolona spico "Y", kiu centras tabularx-ajn "X" kolonojn
+% 
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% por la longaj krampoj en la "Mi ne scias" tablo, kaj la vortara
+% lineoj de "la" kaj "l'"
+%
+\usepackage{multirow} 
+
+% titlesec -- better section/chapter headings
+%
+\usepackage[compact,center]{titlesec}
+\titlespacing*{\chapter}{0pt}{6em}{0pt}
+
+% nice section heading for Patro Nia, etc.
+%
+\newcommand\secthead[3]{%
+\vspace{#2}
+
+{\hfil \scalebox{1.6}[1]{\didone{\bf #1}}}
+
+\vspace{#3}}
+
+% fancy page headers, that is, in imitation of the original
+%
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+
+\fancyhf{}
+
+% remove the rule at top of page
+\renewcommand{\headrulewidth}{0pt}
+
+% letters in the alphabet table at end of book
+%
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+#1\ignorespaces
+}
+
+% this bit removes the page number from the chapter start page
+%
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyhf{}%
+}
+
+% pgfornament line to end a section
+%
+\newcommand{\sectionline}{
+\begin{center}
+\pgfornament[width=0.5\textwidth]{89}
+\end{center}}
+
+% la "por angloj" etikedo
+%
+\sodef\angloj{}{.2em}{0.6em}{0pt}
+\newcommand{\poranglojbox}{%
+\begin{tikzpicture}[every node/.style={inner sep=0pt}]
+\node[align=center](Text){\scalebox{1}[1.2]{\didone{\bf\angloj{por Angloj}}}} ;
+\node[shift={(5pt,2pt)},anchor=center](CNW) at (Text.north east) {};
+\node[shift={(-5pt,2pt)},anchor=center](CNE) at (Text.north west) {};
+\node[shift={(-5pt,-2pt)},anchor=center](CSW) at (Text.south west) {};
+\node[shift={(5pt,-2pt)},anchor=center](CSE) at (Text.south east) {};
+\draw(CNW) to (CNE);
+\draw(CSW) to (CSE);
+\pgftransformshift{\pgfpoint{-1cm}{-0.537cm}}
+\pgftransformscale{0.05};
+\pgftransformrotate{90};
+\anglojcurlicue{};
+\pgftransformreset;
+\pgftransformshift{\pgfpoint{1cm}{0.537cm}}
+\pgftransformscale{0.05};
+\pgftransformrotate{-90};
+\anglojcurlicue{};
+\end{tikzpicture}}
+
+% the command for the morpheme-separation stroke
+%
+\renewcommand{\,}{%
+{\relsize{-2.5}\raisebox{-1.35ex}{$'$}}}
+
+% kapliteroj por la Vortaro
+% 
+\newcommand{\vorhead}[1]{\vspace{1.5ex}
+{\hfil \scalebox{1.5}[1]{\sansfont{#1}}}
+\vspace{1.5ex}}
+
+\newenvironment{outdent}[1]
+  {\setlength{\leftskip}{#1}%%
+   \setlength{\parindent}{-#1}%%
+  }
+  {\par}
+
+% Big delimiters in the demo sentence table
+%
+\newcommand{\tlba}{\scalebox{1}[1.25]\{}
+\newcommand{\trba}{\scalebox{1}[1.25]\}}
+\newcommand{\tlbb}{\multirow{2}{*}{\scalebox{1}[2.5]\{}}
+\newcommand{\trbb}{\multirow{2}{*}{\scalebox{1}[2.5]\}}}
+\newcommand{\tlbc}{\multirow{3}{*}{\scalebox{1}[4]\{}}
+\newcommand{\trbc}{\multirow{3}{*}{\scalebox{1}[4]\}}}
+
+% Ligiloj, kaj ilia koloro 
+%
+\usepackage{color}
+\definecolor{verda_ligilo}{rgb}{0,0.5,0}
+\usepackage[colorlinks,linkcolor=verda_ligilo]{hyperref}
+\usepackage{bookmark}
