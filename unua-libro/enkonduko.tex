@@ -6,6 +6,34 @@
 %
 \usepackage[a5paper,margin=2cm]{geometry}
 
+% Ni bezonas germanajn citilojn, kiam demanditaj.
+%
+\usepackage[english]{babel}  
+
+% por la belaj tiparoj
+%
+\usepackage{fontspec}
+
+% el Google Fonts
+\setmainfont{Old Standard TT}
+\newfontfamily\cowboyfont{Smokum}[LetterSpace=5]
+\newfontfamily\fjallafont{FjallaOne}
+\newfontfamily\grammarpartsfont{FjallaOne}[LetterSpace=20]
+
+% en MacOS
+\newfontfamily\didone{Didot}
+\newfontfamily\copper{Copperplate Light}[LetterSpace=5]
+
+% el Font Squirrel
+\newfontfamily\latinia{Latinia}
+
+% el dafont
+\newfontfamily\monastic{K22 Monastic}
+\newfontfamily\bosox{Bosox}
+
+% el Liberation Fonts
+\newfontfamily\sansfont{Liberation Sans}[LetterSpace=5]
+
 % Creative Commons icons
 %
 \usepackage{ccicons}
@@ -18,10 +46,6 @@
 %
 \def\mytoday{\number\day \space \ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi \space \number\year}
 \def\hodiau{\number\day a~de~\ifcase\month\or januaro\or februaro\or marto\or aprilo\or majo\or junio\or julio\or aŭgusto\or septembro\or oktobro\or novembro\or decembro\fi, \number\year}
-
-% Ni bezonas germanajn citilojn, kiam demanditaj.
-%
-\usepackage[english]{babel}  
 
 % Por ornamoj kiel la "por angloj" etikedo; beletaj sekcilineoj
 %
@@ -176,10 +200,6 @@
 %
 \usepackage{indentfirst} 
 
-% URLoj en la komento pri komposti
-%
-\usepackage{hyperref}
-
 % la krommarĝeno por unuobla alineo
 %
 \usepackage{changepage}
@@ -209,30 +229,6 @@
 % lineoj de "la" kaj "l'"
 %
 \usepackage{multirow} 
-
-% por la belaj tiparoj
-%
-\usepackage{fontspec}
-
-% el Google Fonts
-\setmainfont{Old Standard TT}
-\newfontfamily\cowboyfont{Smokum}[LetterSpace=5]
-\newfontfamily\fjallafont{FjallaOne}
-\newfontfamily\grammarpartsfont{FjallaOne}[LetterSpace=20]
-
-% en MacOS
-\newfontfamily\didone{Didot}
-\newfontfamily\copper{Copperplate Light}[LetterSpace=5]
-
-% el Font Squirrel
-\newfontfamily\latinia{Latinia}
-
-% el dafont
-\newfontfamily\monastic{K22 Monastic}
-\newfontfamily\bosox{Bosox}
-
-% el Liberation Fonts
-\newfontfamily\sansfont{Liberation Sans}[LetterSpace=5]
 
 % sans-serif bolds in body text
 %
@@ -381,3 +377,6 @@ Mi, sub\,skrib\,it\,a, pro\-mes\,as el\,ler\-n\,i la pro\-pon\,it\,a\,n de d-r\,
 \newcommand{\tlbc}{\multirow{3}{*}{\scalebox{1}[4]\{}}
 \newcommand{\trbc}{\multirow{3}{*}{\scalebox{1}[4]\}}}
 
+% Hyperrefs por la enhavo
+%
+\usepackage{bookmark}
