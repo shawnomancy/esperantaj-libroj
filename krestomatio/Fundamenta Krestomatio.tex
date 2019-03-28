@@ -14,7 +14,9 @@
 % La originala verko de D-ro Zamenhof estas senkopirajta.
 %
 \documentclass[a5paper,11pt,openany,twoside]{book}
-\input{enkonduko.tex}
+
+\input{../komuna.tex}
+\input{kresto-enkonduko.tex}
 
 % versionombro
 \newcommand{\laversio}{0.8}
@@ -64,49 +66,43 @@
 
  \vspace*{\stretch{1}}
 
- \csfont {\small
-{\footnotesize FRANCUJO.} — HACHETTE et C\textsuperscript{ie}, {\it PARIS.} \\
-\rule[0.9ex]{13mm}{0.4pt} \\
-{\footnotesize ANGLUJO.} – « REVIEW of REVIEWS », {\footnotesize\it LONDON} \\
-{\footnotesize DANUJO.} — ANDR.-FRED. HÖST \& SÖN, {\footnotesize\it KJOBENHAVN.} \\
-{\footnotesize GERMANUJO.} — MÖLLER \& BOREL, {\footnotesize\it BERLIN.} \\
-{\footnotesize HISPANUJO.} — J. ESPASA, {\footnotesize\it BARCELONA.} \\
-{\footnotesize ITALUJO.} — RAFFAELO GIUSTI, {\footnotesize\it LIVORNO.} \\
-{\footnotesize POLUJO.} — M. ARCT, {\footnotesize\it WARSZAWA.} \\
-{\footnotesize SVEDUJO.} — ESPERANTOFÖRENING, {\footnotesize\it STOCKHOLM.} 
-}
+\csfont \footnotesize
+
+\textsc{francujo.} — HACHETTE et C\textsuperscript{ie}, \textsc{\textit{paris.}}
+
+\rule[0.9ex]{13mm}{0.4pt}
+
+\textsc{anglujo.} – « REVIEW of REVIEWS », \textsc{\textit{london}}
+
+\textsc{danujo.} — ANDR.-FRED. HÖST \& SÖN, \textsc{\textit{kjobenhavn.}}
+
+\textsc{germanujo.} — MÖLLER \& BOREL, \textsc{\textit{berlin.}}
+
+\textsc{hispanujo.} — J. ESPASA, \textsc{\textit{barcelona.}}
+
+\textsc{italujo.} — RAFFAELO GIUSTI, \textsc{\textit{livorno.}}
+
+\textsc{polujo.} — M. ARCT, \textsc{\textit{warszawa.}}
+
+\textsc{svedujo.} — ESPERANTOFÖRENING, \textsc{\textit{stockholm.}}
 
 \end{center}
  
 \newpage
 
 %
-% Dr. Zamenhof's portrait
+% D-ro Zamenhof
 %
-\thispagestyle{empty}
-\begin{center}
- \vspace*{\stretch{1}}
-\begin{figure}[!ht]
-\centering
-\includegraphics[scale=0.15]{Zamenhof}
-\end{figure}
-\vspace*{0.5cm}
-\nicefont
-{\LARGE Lazaro Ludoviko ZAMENHOF} \\[1ex]
-{\large Aŭtoro de la lingvo «Esperanto»} \\[1ex]
-{\small (la 15-a de Decembro 1859 --- la 14-a de Aprilo 1917)}
- \vspace*{\stretch{1}}
-\end{center}
-\newpage
+\zamenhof
 
 %
 % TOC (ho Dio ...)
 %
 \input{enhavo.tex}
 
-%
-% Antaŭparolo
-%
+
+ Antaŭparolo
+
 \chapter*{Anta\u uparolo}
 \thispagestyle{empty}
 \fancyhead[LE,RO]{\footnotesize\thepage}
@@ -116,9 +112,9 @@
 \label{antau}
 \input{001_antauxparolo.tex}
 
-%
-% Ekzercoj
-%
+
+ Ekzercoj
+
 \mainmatter
 \titleformat{\chapter}[display]{\filcenter\Large}{\vspace*{-4em}\narrow{\huge{\textbf{FUNDAMENTA KRESTOMATIO}}}\\\rule{\textwidth}{0.4pt}\\[2cm]\thechapter}{1ex}{\MakeUppercase}[{\rule{13mm}{0.4pt}}]
 \chapter{Ekzercoj}
@@ -126,9 +122,9 @@
 \label{ekzercoj}
 \input{002_ekzercoj.tex}
 
-%
-% Fabeloj kaj Legendoj
-%
+
+ Fabeloj kaj Legendoj
+
 \titleformat{\chapter}[display]{\filcenter\Large}{\thechapter}{1ex}{\MakeUppercase}[{\rule{13mm}{0.4pt}}]
 \chapter{Fabeloj kaj Legendoj}
 \markboth{FUNDAMENTA KRESTOMATIO.}{FABELO KAJ LEGENDOJ.}
@@ -160,17 +156,17 @@
 \label{virineto}
 \input{009_la_virineto_de_maro.tex}
 
-%
-% Anekdotoj
-%
+
+ Anekdotoj
+
 \chapter{Anekdotoj}
 \markboth{FUNDAMENTA KRESTOMATIO.}{ANEKDOTOJ.}
 \label{anekdotoj}
 \input{010_anekdotoj.tex}
 
-%
-% Rakontoj
-%
+
+ Rakontoj
+
 \chapter{Rakontoj}
 \markboth{FUNDAMENTA KRESTOMATIO.}{RAKONTOJ.}
 \section{Nokto}
@@ -207,9 +203,9 @@
 \label{porcio}
 \input{018_la_porcio_da_glaciajxo.tex}
 
-%
-% El la Vivo kaj Sciencoj
-%
+
+ El la Vivo kaj Sciencoj
+
 \chapter{El la Vivo kaj Sciencoj}
 \markboth{FUNDAMENTA KRESTOMATIO.}{EL LA VIVO KAJ SCIENCOJ.}
 \section{Bagateloj}
@@ -240,9 +236,9 @@
 \label{dijon}
 \input{025_la_sunhorlogxo_en_dijon.tex}
 
-%
-% Artikoloj pri Esperanto
-%
+
+ Artikoloj pri Esperanto
+
 \chapter{Artikoloj pri Esperanto}
 \markboth{FUNDAMENTA KRESTOMATIO.}{ARTIKOLOJ PRI ESPERANTO.}
 \section{El la unua libro de la lingvo Esperanto}
@@ -263,9 +259,9 @@ la ideo de lingvo internacia}
 \label{esenco}
 \input{029_esenco_kaj__lingvo_internacia.tex}
 
-%
-% Poezio
-%
+
+ Poezio
+
 \chapter{Poezio}
 \markboth{FUNDAMENTA KRESTOMATIO.}{POEZIO.}
 \addcontentsline{toc}{section}{L. Zamenhof}
