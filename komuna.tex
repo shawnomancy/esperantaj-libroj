@@ -14,7 +14,7 @@
 % 
 % Citilojn kaj plu
 %
-\usepackage[english,german,esperanto]{babel}  
+\usepackage[english,french,polish,german,russian,esperanto]{babel}  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -35,17 +35,24 @@
 \newfontfamily\cowboyfont{Smokum}[LetterSpace=5]
 \newfontfamily\fjallafont{FjallaOne}
 \newfontfamily\grammarpartsfont{FjallaOne}[LetterSpace=20]
+\newfontfamily\nicefont{Cardo}
+\newfontfamily\arbfont{Arbutus Slab}
 
 % en MacOS
 \newfontfamily\didone{Didot}
 \newfontfamily\copper{Copperplate Light}[LetterSpace=5]
+\newfontfamily\chunk{Rockwell}
 
 % el Font Squirrel
 \newfontfamily\latinia{Latinia}
+\newfontfamily\curve{England Hand DB}
 
 % el dafont
 \newfontfamily\monastic{K22 Monastic}
 \newfontfamily\bosox{Bosox}
+
+% el dafont kaj ...
+\newfontfamily\fr[BoldFont=Fette classic UNZ Fraktur]{UnifrakturMaguntia}
 
 % el Liberation Fonts
 \newfontfamily\sansfont{Liberation Sans}[LetterSpace=5]
@@ -53,6 +60,8 @@
 
 % en TeXlive
 \newfontfamily\csfont{TeX Gyre Schola}
+\newfontfamily\bookman{TeX Gyre Bonum}
+\newfontfamily\times{TeX Gyre Termes}
 
 % sans-serif bolds in body text
 \newcommand\inbold[1]{\scalebox{1}[0.8]{\fjallafont{#1}}}
@@ -85,10 +94,6 @@
 \usepackage{soul}
 \sodef\spaceout{}{.2em}{0.6em}{0pt}
 \sodef\spaceoutmed{}{.1em}{0.5em}{0pt}
-
-% Datoprezento
-%
-\def\hodiau{\number\day a~de~\ifcase\month\or januaro\or februaro\or marto\or aprilo\or majo\or junio\or julio\or aŭgusto\or septembro\or oktobro\or novembro\or decembro\fi, \number\year}
 
 % interlinea distanco
 \usepackage{setspace} 
@@ -123,14 +128,6 @@
 %
 \usepackage{longtable}
 
-% tabularx helpos meti la Promesoj, kaj difinas la larĝeco de niaj tabloj
-% 
-\usepackage{tabularx}
-
-% jen kolona spico "Y", kiu centras tabularx-ajn "X" kolonojn
-% 
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-
 % por la longaj krampoj en la "Mi ne scias" tablo, kaj la vortara
 % lineoj de "la" kaj "l'"
 %
@@ -161,13 +158,19 @@
 % remove the rule at top of page
 \renewcommand{\headrulewidth}{0pt}
 
-% letters in the alphabet table at end of book
+% tabularx helpos meti la Promesoj, kaj difinas la larĝeco de niaj tabloj
+% 
+% also letters in the alphabet table at end of book
 %
+\usepackage{tabularx}
+\usepackage{array}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 \newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
-\newcolumntype{^}{>{\currentrowstyle}}
+\newcolumntype{Z}{>{\currentrowstyle}}
 \newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
 #1\ignorespaces
 }
+
 
 % this bit removes the page number from the chapter start page
 %
@@ -231,6 +234,41 @@
 \newcommand{\trbb}{\multirow{2}{*}{\scalebox{1}[2.5]\}}}
 \newcommand{\tlbc}{\multirow{3}{*}{\scalebox{1}[4]\{}}
 \newcommand{\trbc}{\multirow{3}{*}{\scalebox{1}[4]\}}}
+
+% Heading for the colophon
+%
+\newcommand\kolofono{
+\fancyhead[C]{}
+\titleformat{\chapter}[display]{\centering\sansfont}{\chaptertitlename}{0pt}{\LARGE}
+\chapter*{KOMENTO PRI KOMPOSTAĴO.}
+
+\begin{center}
+\rule[0.5ex]{0.5\textwidth}{0.4pt}
+
+\emph{Jen versio \laversio{} de ĉi tiu} \XeLaTeX{} \emph{aranĝaĵo.}
+\end{center}
+}
+
+%
+% Dr. Zamenhof's portrait
+%
+\newcommand\zamenhof{
+\thispagestyle{empty}
+\begin{center}
+ \vspace*{\stretch{1}}
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.15]{../graphics/Zamenhof}
+\end{figure}
+\vspace*{0.5cm}
+\nicefont
+{\LARGE Lazaro Ludoviko ZAMENHOF} \\[1ex]
+{\large Aŭtoro de la lingvo «Esperanto»} \\[1ex]
+{\small (la 15-a de Decembro 1859 --- la 14-a de Aprilo 1917)}
+ \vspace*{\stretch{1}}
+\end{center}
+\newpage
+}
 
 % Ligiloj, kaj ilia koloro 
 %

@@ -1,0 +1,117 @@
+% Fundamento de Esperanto
+%
+% L. L. ZAMENHOF, 1905
+%
+% XeLaTeX-a eldono de Shawn C. KNIGHT, 2019
+%
+% This work is licensed under a Creative Commons 
+% Attribution-NonCommercial-ShareAlike 4.0 International License.
+% The original work by Dr. Zamenhof is in the public domain.
+%
+% Ĉi tiu verko estas permesita per Creative Commons 
+% Attribution-NonCommercial-ShareAlike 4.0 Internacia Permesilo.
+% La originala verko de D-ro Zamenhof estas senkopirajta.
+%
+\documentclass[11pt,twoside]{book}
+
+% load the preamble
+\input{../komuna.tex}
+\input{fundamento-enkonduko.tex}
+
+% Version number 
+%
+\newcommand{\laversio}{0.82}
+
+%
+% End preamble and begin title page
+% 
+\begin{document}
+\frontmatter
+\sloppy
+
+%
+
+\begin{titlepage}
+\vspace*{\fill}
+\parbox{0.9\textwidth}{\nicefont{\fontsize{42}{48}\selectfont Fundamento\vskip 0.7ex\hfill de Esperanto}}
+\vspace*{\fill}
+\end{titlepage}
+
+%
+% adverts page
+%
+\input{adverts.tex}
+
+%
+% fuller title page
+%
+\input{decortitle.tex}
+
+%
+% Inside title page
+%
+\renewcommand{\footrulewidth}{0.4pt}
+\setstretch{1.1}
+
+\zamenhof
+
+\cleardoublepage
+
+% Antaŭparolo
+\input{antau.tex}
+
+% Enhavo
+\input{enhavo.tex}
+
+% Gramatiko por francoj
+\input{franca.tex}
+
+% Gramatiko por angloj
+\input{angla.tex}
+
+% Gramatiko por germanoj
+\input{germana.tex}
+
+% Gramatiko por rusoj
+\input{rusa.tex}
+
+% Gramatiko por poloj
+\input{pola.tex}
+
+% Ekzercaro
+\markboth{FUNDAMENTO DE ESPERANTO}{EKZERCARO}
+\input{ekzercaro.tex}
+\vspace{1ex}
+
+\leftpointright La plej grava libro por ĉiu, kiu deziras perfectiĝi en la lingvo Esperanto, estas la verko
+\begin{center}
+\gramsec{Fundamenta Krestomatio,}
+\end{center}
+
+{\setlength{\parindent}{0pt} kiu konsistas el 458 paĝoj kaj enhavas tre multe da plej diversa materialo por legado \textit{en la plej modela Esperanta stilo.} Kosto fr. 3,50. Ricevebla ĉe Hachette kaj K\textsuperscript{io} en Parizo kaj en ĉiu esperantista librovendejo.}
+
+{\centering\rule{13mm}{0.4pt}\par}
+
+\cleardoublepage
+
+% Universala Vortaro
+\input{vortaro.tex}
+
+%
+%
+%
+\kolofono
+
+Por la moderna leganto, mi movis la tabelo de la enhavo pli proskima al la komenco de la libro.
+
+La belskribadaj literoj ĉe la komenco de la \emph{Ekzercaro} estis faritaj, uzante tiparo nomiĝas "England Hand DB", kiun fontsquirrel.com kredis, estas publikaĵo.  Se la malo estus montrita, mi rekompostus la libron en alia tiparo.
+
+\vspace{1ex}
+
+{\setlength{\parindent}{0em}
+Shawn KNIGHT (angle elparolata \emph{ŝan najt})\\
+\hodiau}
+
+\input{../license.tex}
+
+\end{document}
