@@ -45,11 +45,11 @@ Pri la tiparoj kiuj ne estas liberaj, mi ne povus trovi bonajn liberajn imitojn 
 
 [Google Fonts:](https://fonts.google.com/)
 
-* Old Standard TT
-* Cardo
-* Smokum
-* FjallaOne
 * Arbutus Slab
+* Cardo
+* FjallaOne
+* Old Standard TT
+* Smokum
 
 [Liberation Fonts:](https://github.com/liberationfonts/liberation-fonts):
 
@@ -61,20 +61,24 @@ Pri la tiparoj kiuj ne estas liberaj, mi ne povus trovi bonajn liberajn imitojn 
 
 [Font Squirrel:](https://www.fontsquirrel.com/)
 
+* England Hand DB
 * Latinia
 
 [DaFont.com:](https://www.dafont.com/)
 
-* K22 Monastic
 * Bosox
-* Mk Latino
+* K22 Monastic
 * Fette UNZ Fraktur
+* Mk Latino
 
 Enhavita en via TeX-distribuo aŭ el CTAN (_included in your TeX distribution or at CTAN_):
 
+* TeX Gyre Bonum
 * TeX Gyre Schola
+* TeX Gyre Termes
 
 Enhavita en MacOS:
 
 * Didot
 * Copperplate Light
+* Rockwell
