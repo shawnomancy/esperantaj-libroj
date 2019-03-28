@@ -43,26 +43,32 @@ Finally I want to thank my Esperanto-learning friends, to whom, and to the memor
 
 Pri la tiparoj kiuj ne estas liberaj, mi ne povus trovi bonajn liberajn imitojn de la originalaj.  Se mi trovus tiajn tiparojn, mi ŝanĝos tiun deponejon por uzi ilin. (_About the fonts which are not free, I've been unable to find good free imitations of the originals.  If I find such fonts, I will update the repository to use them._)
 
-Google Fonts:
+[Google Fonts:](https://fonts.google.com/)
 
 * Old Standard TT
 * Cardo
 * Smokum
 * FjallaOne
+* Arbutus Slab
 
-[Liberation Fonts](https://github.com/liberationfonts/liberation-fonts):
+[Liberation Fonts:](https://github.com/liberationfonts/liberation-fonts):
 
 * Liberation Sans
 
-Font Squirrel:
+[Unifraktur Project:](http://unifraktur.sourceforge.net/)
+
+* Unifraktur Maguntia
+
+[Font Squirrel:](https://www.fontsquirrel.com/)
 
 * Latinia
 
-DaFont.com:
+[DaFont.com:](https://www.dafont.com/)
 
 * K22 Monastic
 * Bosox
 * Mk Latino
+* Fette UNZ Fraktur
 
 Enhavita en via TeX-distribuo aŭ el CTAN (_included in your TeX distribution or at CTAN_):
 
