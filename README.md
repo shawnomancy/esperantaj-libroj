@@ -45,6 +45,7 @@ Pri la tiparoj kiuj ne estas liberaj, mi ne povus trovi bonajn liberajn imitojn 
 
 [Google Fonts:](https://fonts.google.com/)
 
+* Amethysta
 * Arbutus Slab
 * Cardo
 * FjallaOne
@@ -63,7 +64,6 @@ Pri la tiparoj kiuj ne estas liberaj, mi ne povus trovi bonajn liberajn imitojn 
 [Font Squirrel:](https://www.fontsquirrel.com/)
 
 * England Hand DB
-* Latinia
 
 [DaFont.com:](https://www.dafont.com/)
 
