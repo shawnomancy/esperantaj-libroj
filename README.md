@@ -49,6 +49,7 @@ Pri la tiparoj kiuj ne estas liberaj, mi ne povus trovi bonajn liberajn imitojn 
 * Cardo
 * FjallaOne
 * Old Standard TT
+* Sancreek
 * Smokum
 
 [Liberation Fonts:](https://github.com/liberationfonts/liberation-fonts):
@@ -66,7 +67,6 @@ Pri la tiparoj kiuj ne estas liberaj, mi ne povus trovi bonajn liberajn imitojn 
 
 [DaFont.com:](https://www.dafont.com/)
 
-* Bosox
 * K22 Monastic
 * Fette UNZ Fraktur
 * Mk Latino
