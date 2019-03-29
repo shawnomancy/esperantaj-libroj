@@ -2,6 +2,8 @@
 % Enkonduko speciala por Unua Libro
 %
 
+\usepackage{tabu}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % speciala tiparoj
@@ -179,12 +181,14 @@ Mi, sub\,skrib\,it\,a, pro\-mes\,as el\,ler\-n\,i la pro\-pon\,it\,a\,n de d-r\,
 \titleformat{\subsection}[display]{\centering\didone\bf}{}{0pt}{}
 \titlespacing{\subsection}{0pt}{1em}{1em}
 
+% section headings for parts I, II, III
+%
 \newcommand\mysect[1]{%
 \section*{\scalebox{2}[1]{#1}}
 \addcontentsline{toc}{section}{#1}
 }
 
-% the subsections will contain underscores.  remove those in the TOC
+% the subsections will contain the letter "x" as a code.  remove those in the TOC
 % but turn them into morpheme commas in the print
 %
 \newcommand{\myTempSubsect}{\ldots}
@@ -198,10 +202,22 @@ Mi, sub\,skrib\,it\,a, pro\-mes\,as el\,ler\-n\,i la pro\-pon\,it\,a\,n de d-r\,
 \subsection*{\scalebox{1.6}[1]{\myTempSubsect}}
 }
 
+% section headings for gramatiko.  need to expand spaces 
+% between words for the display because rescaling kills them
+%
+\newcommand\gramsect[2]{%
+\renewcommand\myTempSubsect{#2}
+\xpatchcmd*{\myTempSubsect}{ }{\hspace{1ex}}{}{}
+\section*{\narrow{\Large #1.} \hspace{.2em} \narrow{\large\grammarpartsfont \myTempSubsect{}.}}
+\addcontentsline{toc}{section}{#2}
+}
+
 % lengths to save
 %
 \newlength{\savedparskip}
 \newlength{\savedparindent}
+\setlength{\savedparskip}{\parskip}
+\setlength{\savedparindent}{\parindent}
 
 % use english by default
 \selectlanguage{english}

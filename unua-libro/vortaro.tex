@@ -13,12 +13,13 @@
 \begin{landscape}
 \phantomsection
 \addcontentsline{toc}{chapter}{International-English Vocabulary}
-\begin{tabularx}{19cm}{c|c|c}
+%\begin{tabularx}{19cm}{c|c|c}
+\begin{tabu} to 19cm{X|X|X}
 \parbox{5.85cm}{
 {\hfil \small \leftpointright{} \sansfont{EVERYTHING} \rightpointleft}
 
 \vspace{1ex}
-\scriptsize written in the international language can be translated by means of this vocabulary. If several words are required to express one idea they must
+\footnotesize written in the international language can be translated by means of this vocabulary. If several words are required to express one idea they must be written \parfillskip=0pt
 }
 &
 \parbox{6cm}{
@@ -33,17 +34,27 @@
 \end{center}
 }
 &
-\parbox{5.85cm}{
-\scriptsize be written in one, but separated by commas; e.~g., \emph{frat\,in\,o}, though one idea, is yet composed of three words, which must be looked for separately in the vocabulary.
+
+% This rather amazing piece of code comes from:
+% https://tex.stackexchange.com/questions/280017/center-last-line-of-the-paragraph-but-i-dont-like-small-lines
+% It builds the paragraph, then unrolls it, then rebuilds the last line with hfills to center it,
+% then puts all that in the parbox.
+%
+{
+\setbox0=\vbox{\footnotesize in one, but separated by commas; e.~g., \emph{frat\,in\,o}, though one idea, is yet \mbox{composed} of three words, which must be \mbox{looked} for separately in the \mbox{vocabulary.}}
+\setbox1=\vbox{%
+\unvbox0
+\setbox2=\lastbox
+\hbox to 5.85cm{\hfill\unhcopy2 \unskip\hfill}}
+\parbox{5.85cm}{\unvbox1}
 }
-\end{tabularx}
+\end{tabu}
 
 {\hfil \rule{19cm}{1pt}}
 \begin{multicols}{5}
 \setlength{\columnsep}{1cm}
 \setlength{\columnseprule}{1pt}
 \footnotesize
-\setstretch{1}
 
 \vorhead{A}
 
@@ -1707,6 +1718,9 @@ n
 \emph{surtut\,} coat
 \end{outdent}
 
+%
+\columnbreak
+
 \vorhead{Ŝ}
 
 \begin{outdent}{1em}
@@ -1898,6 +1912,9 @@ e.~g., \emph{cigar\,} — a cigar, \emph{cigar\,uj\,} — a cigar-box; \emph{pom
 
 \emph{uz\,} to make use of 
 \end{outdent}
+
+%
+\columnbreak
 
 \vorhead{V}
 
