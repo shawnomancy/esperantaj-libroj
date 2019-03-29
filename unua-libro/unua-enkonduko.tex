@@ -170,3 +170,38 @@ Mi, sub\,skrib\,it\,a, pro\-mes\,as el\,ler\-n\,i la pro\-pon\,it\,a\,n de d-r\,
 \endgroup}
 \makeatother
 
+% titoloj
+%
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat{\chapter}[display]{\centering}{}{0pt}{\phantomsection\Huge}
+\titleformat{\section}[display]{\centering\large\cowboyfont}{}{0pt}{\phantomsection}
+\titlespacing{\section}{0pt}{1em}{1em}
+\titleformat{\subsection}[display]{\centering\didone\bf}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{1em}{1em}
+
+\newcommand\mysect[1]{%
+\section*{\scalebox{2}[1]{#1}}
+\addcontentsline{toc}{section}{#1}
+}
+
+% the subsections will contain underscores.  remove those in the TOC
+% but turn them into morpheme commas in the print
+%
+\newcommand{\myTempSubsect}{\ldots}
+\newcommand\mysubsect[1]{%
+\renewcommand\myTempSubsect{#1}
+\xpatchcmd*{\myTempSubsect}{x}{}{}{}
+\phantomsection
+\addcontentsline{toc}{subsection}{\myTempSubsect}
+\renewcommand\myTempSubsect{#1}
+\xpatchcmd*{\myTempSubsect}{x}{\,}{}{}
+\subsection*{\scalebox{1.6}[1]{\myTempSubsect}}
+}
+
+% lengths to save
+%
+\newlength{\savedparskip}
+\newlength{\savedparindent}
+
+% use english by default
+\selectlanguage{english}

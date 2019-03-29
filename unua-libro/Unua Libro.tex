@@ -20,20 +20,18 @@
 \input{unua-enkonduko.tex}
 
 % Version number
-\newcommand{\laversio}{0.95}
+\newcommand{\laversio}{0.96}
 
 %
 % End preamble and then begin title page
 % 
 \begin{document}
+\setlength{\savedparskip}{\parskip}
+\setlength{\savedparindent}{\parindent}
 \sloppy
 \begin{titlepage}
 
-\newlength{\tempparskip}
-\setlength{\tempparskip}{\parskip}
 \setlength{\parskip}{2ex}
-\newlength{\tempparindent}
-\setlength{\tempparindent}{\parindent}
 
 \vspace*{\fill}
 
@@ -71,13 +69,12 @@
 
 \end{center}
 
-\setlength{\parskip}{\tempparskip}
 \end{titlepage}
+\setlength{\parskip}{\savedparskip}
 
 %
 % Inside title page
 %
-\renewcommand{\footrulewidth}{0.4pt}
 \setstretch{1.1}
 
 \vspace*{12em}
@@ -95,6 +92,9 @@
 
 {\small \leftpointright An international language, like every national one, is the property of society, and the author renounces all personal rights in it forever.}
 
+% 1a germana eldono diris: "Die internationale Sprache soll, gleich jeder nationalen, ein allgemeines Eigenthum sein,
+% wesshalb der Verfasser für immer auf seine persönlichen Rechte darüber verzichtet."
+
 \vspace{5em}
 
 \begin{flushright}
@@ -111,17 +111,15 @@
 %
 % Introduction
 %
-\titleformat{\chapter}[display]{\centering}{\chaptertitlename}{0pt}{\Huge}
-\renewcommand{\footrulewidth}{0pt}
-\chapter*{\scalebox{0.8}[1]{INTRODUCTION.}}
-\addcontentsline{toc}{chapter}{Introduction}
+\chapter*{\protect\scalebox{0.8}[1]{INTRODUCTION.}}
+\addcontentsline{toc}{chapter}{Introduction.}
 \fancyhead[C]{--- \thepage{} ---}
 
 \begin{center}
 \rule{5em}{0.4pt}
 \end{center}
 
-The reader will doubtless take up this little work with an incredulous smile, supposing that he is about to peruse the impracticable schemes of some good citizen of Utopia. I would, therefore, in the first place, beg of him to lay aside all prejudice, and treat seriously and critically the question brought before him.
+The reader will doubtless take up this little work with an incredulous smile, supposing that he is about to peruse the impracticable schemes of some good citizen of Utopia. I would, therefore, in the first place, beg of him to lay aside all prejudice, and treat seriously and critically the question brought before him. 
 
 I need not here point out the considerable importance to humanity of an international language,---a language unconditionally accepted by everyone, and the common property of the whole world. How much time and labour we spend in learning foreign tongues, and yet when travelling in foreign countries, we are, as a rule, unable to converse with other human beings in their own language. How much time, labour, and money are wasted in translating the literary productions of one nation into the language of another, and yet, if we rely on translations alone, we can become acquainted with but a tithe of foreign literature.
 
@@ -151,13 +149,7 @@ Amongst the numberless projects submitted at various times to the public, often 
 
 Before proceeding to enlighten the reader as to the means employed for the solution of the problems, I would ask of him to reconsider the exact significance of each separately, so that he may not be inclined to carp at my methods of solution, merely because they may appear to him perhaps too simple. I do this, because I am well aware that the majority of mankind feel disposed to bestow their consideration on any subject the more carefully, in proportion as it is enigmatical and incomprehensible. Such persons, at the sight of so short a grammar, with rules so simple, and so readily intelligible, will be ready to regard it with a contemptuous glance, never considering the fact, --- of which a little further reflection would convince them, --- that this simplification and bringing of each detail out of its original complicated form into the simplest and easiest conceivable, was, in fact, the most insuperable obstacle to be coped with. 
 
-\vspace{12pt}
-
-{\hfil \scalebox{2}[1]{\large\cowboyfont I.}}
-\phantomsection
-\addcontentsline{toc}{section}{I.}
-
-\vspace{12pt}
+\mysect{I.}
 
 The first of the problems was solved in the following manner:
 
@@ -177,13 +169,7 @@ By the help of these rules, and others, which will be found in the grammar, the 
 
 Thus the acquirement of this rich, mellifluous, universally-comprehensible language, is not a matter of years of laborious study, but the mere light amusement of a few days. 
 
-\vspace{12pt}
-
-{\hfil \scalebox{2}[1]{\large\cowboyfont II.}}
-\phantomsection
-\addcontentsline{toc}{section}{II.}
-
-\vspace{12pt}
+\mysect{II.}
 
 The solution of the second problem was effected thus:
 
@@ -232,22 +218,15 @@ Let us suppose that you have to write to a Spaniard, who neither knows your lang
 
 In order that the reader may prove for himself the truth of all that has been set forth above, a few specimens of the international language are subjoined.\footnote{In correspondence with persons who have learnt the language, as well as in works written for them exclusively, the commas, separating parts of words, are omitted.}
 
-\phantomsection
-\addcontentsline{toc}{subsection}{Patro nia}
-\secthead{Patr\,o ni\,a.}{2ex}{2ex}
+\mysubsect{Patrxo nixa.}
 
 Patr\,o ni\,a, kiu est\,as en la ĉiel\,o, sankt\,a est\,u Vi\,a nom\,o, ven\,u reĝ\,ec\,o Vi\,a, est\,u vol\,o Vi\,a, kiel en la ĉiel\,o, tiel ankaŭ sur la ter\,o. Pan\,o\,n ni\,a\,n ĉiu\,tag\,a\,n don\,u al ni hodiaŭ, kaj pardon\,u al ni ŝuld\,o\,j\,n ni\,a\,j\,n, kiel ni ankaŭ pardon\,as al ni\,a\,j ŝuld\,ant\,o\,j; ne konduk\,u ni\,n en tent\,o\,n; sed liber\,ig\,u ni\,n de la mal\,ver\,a, ĉar Vi\,a est\,as la reg\,ad\,o, la fort\,o, kaj la glor\,o etern\,e. Amen!
 
-\phantomsection
-\addcontentsline{toc}{subsection}{El la Biblio}
-\secthead{El la Bibli\,o.}{2ex}{2ex}
+\mysubsect{El la Biblixo.}
 
 Je la komenc\,o Di\,o kre\,is la ter\,o\,n kaj la ĉiel\,o\,n. Kaj la ter\,o est\,is sen\,form\,a kaj dezert\,a, kaj mal\,lum\,o est\,is super la profund\,aĵ\,o, kaj la anim\,o de Di\,o si\,n port\,is super la akv\,o. Kaj Di\,o dir\,is: est\,u lum\,o; kaj far\,iĝ\,is lumo. Kaj Di\,o vid\,is la lum\,o\,n ke ĝi est\,as bon\,a, kaj nom\,is Di\,o la lum\,o\,n tag\,o, kaj la mal\,lum\,o\,n Li nom\,is nokt\,o. Kaj est\,is vesper\,o, kaj est\,is maten\,o --- unu tag\,o. Kaj Di\,o dir\,is: est\,u firm\,aĵ\,o inter la akv\,o, kaj ĝi apart\,ig\,u akv\,o\,n de akv\,o. Kaj Di\,o kre\,is la firm\,aĵ\,o\,n kaj apart\,ig\,is la akv\,o\,n kiu est\,as sub la firm\,aĵ\,o, de la akv\,o kiu est\,as super la firm\,aĵ\,o; kaj far\,iĝ\,is tiel. Kaj Di\,o nom\,is la firm\,aĵ\,o\,n ĉiel\,o. Kaj est\,is vesper\,o, kaj est\,is maten\,o --- la du\,a tag\,o. Kaj Di\,o dir\,is: kolekt\,u si\,n la akv\,o de sub la ĉiel\,o unu lok\,o\,n, kaj montr\,u si\,n sek\,aĵ\,o; kaj far\,iĝ\,is tiel. Kaj Di\,o nom\,is la sek\,aĵ\,o\,n ter\,o, kaj la kolekt\,oj\,n de la akv\,o Li nom\,is mar\,o\,j.
 
-
-\phantomsection
-\addcontentsline{toc}{subsection}{Letero}
-\secthead{Leter\,o.}{2ex}{2ex}
+\mysubsect{Leterxo.}
 
 \hspace{5em} Kar\,a amik\,o!
 
@@ -255,13 +234,10 @@ Mi prezent\,as al mi kia\,n vizaĝ\,o\,n vi far\,os post la ricev\,o de mi\,a le
 
 Mi leg\,is antaŭ kelk\,a\,j tag\,o\,j libr\,et\,o\,n sub la nom\,o \glqq{}Lingv\,o inter\,naci\,a\grqq{}. La aŭtor\,o kred\,ig\,as, ke per tiu lingv\,o oni pov\,as est\,i kompren\,at\,a de la tut\,a mond\,o, se eĉ la adres\,it\,o ne sol\,e ne sci\,as la lingv\,o\,n, sed eĉ ankaŭ ne aŭd\,is pri ĝi; oni dev\,as sol\,e al\,don\,i al la leter\,o mal\,grand\,a\,n foli\,et\,o\,n nom\,at\,a\,n \glqq{}vort\,ar\,o\grqq{}. Dezir\,ant\,e vid\,i, ĉu tio est\,as ver\,a, mi skrib\,as al vi en tiu lingv\,o, kaj mi eĉ unu vort\,o\,n ne al\,met\,as en ali\,a lingv\,o, tiel kiel se ni tut\,e ne kompren\,us unu la lingv\,o\,n de la ali\,a. Respond\,u al mi, ĉu vi efektiv\,e kompren\,is kio\,n mi skrib\,is. Se la afer\,o propon\,it\,a de la aŭtor\,o est\,as efektiv\,e bon\,a, oni dev\,as per ĉiu\,j fort\,o\,j li\,n help\,i. Kiam mi hav\,os vi\,a\,n respond\,o\,n, mi send\,os al vi la libr\,et\,o\,n; montr\,u ĝi\,n al ĉiu\,j loĝ\,ant\,o\,j de vi\,a urb\,et\,o, send\,u ĝin ĉiu\,n vilaĝ\,o\,n ĉirkaŭ la urb\,et\,o, ĉiu\,n urb\,o\,n kaj urb\,et\,o\,n, kie vi nur hav\,as amik\,o\,j\,n aŭ kon\,at\,o\,j\,n. Est\,as neces\,e ke grand\,eg\,a nombr\,o da person\,o\,j don\,u si\,a\,n voĉ\,o\,n --- tiam post la plej mal\,long\,a temp\,o est\,os decid\,it\,a afer\,o, kiu pov\,as port\,i grand\,eg\,a\,n util\,o\,n al la hom\,a societ\,o.
 
-
-\phantomsection
-\addcontentsline{toc}{subsection}{Mia penso}
-\secthead{Mi\,a pens\,o.}{2ex}{0pt}
+\mysubsect{Mixa pensxo.}
 
 \begin{verse}
-        \hspace{1em} Sur la kamp\,o, for de l’mond\,o,\\
+        \vin Sur la kamp\,o, for de l’mond\,o,\\
         Antaŭ nokt\,o de somer\,o\\
         Amik\,in\,o en la rond\,o\\
         Kant\,as kant\,o\,n pri l’esper\,o.\\
@@ -272,7 +248,7 @@ Mi leg\,is antaŭ kelk\,a\,j tag\,o\,j libr\,et\,o\,n sub la nom\,o \glqq{}Lingv
 
 \pstars
 
-        \hspace{1em} \glqq{}Ĉu vi dorm\,as? Ho, sinjor\,o,\\
+        \vin \glqq{}Ĉu vi dorm\,as? Ho, sinjor\,o,\\
         Kial tia sen\,mov\,ec\,o?\\
         Ha, kred\,ebl\,e re\,memor\,o\\
         El la kar\,a infan\,ec\,o?\grqq{}\\
@@ -283,7 +259,7 @@ Mi leg\,is antaŭ kelk\,a\,j tag\,o\,j libr\,et\,o\,n sub la nom\,o \glqq{}Lingv
 
 \pstars
 
-        \hspace{1em} Mi\,a pens\,o kaj turment\,o,\\
+        \vin Mi\,a pens\,o kaj turment\,o,\\
         Kaj dolor\,o\,j kaj esper\,o\,j!\\
         Kiom de mi en silent\,o\\
         Al vi ir\,is jam ofer\,o\,j!\\
@@ -294,7 +270,7 @@ Mi leg\,is antaŭ kelk\,a\,j tag\,o\,j libr\,et\,o\,n sub la nom\,o \glqq{}Lingv
 
 \pstars
 
-        \hspace{1em} Fajr\,o\,n sent\,as mi intern\,e,\\
+        \vin Fajr\,o\,n sent\,as mi intern\,e,\\
         Viv\,i ankaŭ mi dezir\,as, ---\\
         Io pel\,as mi\,n etern\,e,\\
         Se mi al gaj\,ul\,o\,j ir\,as \ldots{} \\
@@ -304,59 +280,51 @@ Mi leg\,is antaŭ kelk\,a\,j tag\,o\,j libr\,et\,o\,n sub la nom\,o \glqq{}Lingv
         En esper\,o --- sen dolor\,o!
 \end{verse}
 
-\phantomsection
-\addcontentsline{toc}{subsection}{El Heine’}
-\secthead{El Heine’.}{0pt}{0pt}
+\mysubsect{El Heine’.}
 
 \begin{verse}
-        \hspace{1em} En sonĝ\,o princ\,in\,o\,n mi vid\,is\\
+        \vin En sonĝ\,o princ\,in\,o\,n mi vid\,is\\
         Kun vang\,o\,j mal\,sek\,a\,j de plor\,o, ---\\
         Sub arb\,o, sub verd\,a ni sid\,is\\
         Ten\,ant\,e si\,n kor\,o ĉe kor\,o.\\
 
 \pstars
 
-        \hspace{1em} \glqq{}De l’patr\,o de l’vi\,a la kron\,o\\
+        \vin \glqq{}De l’patr\,o de l’vi\,a la kron\,o\\
         Por mi ĝi ne est\,as hav\,ind\,a;\\
         For, for li\,a sceptr\,o kaj tron\,o ---\\
         Vi\,n mem mi dezir\,as, am\,ind\,a!\grqq{}\\
 
 \pstars
 
-        \hspace{1em} --- \glqq{}Ne ebl\,e!\grqq{} ŝi al mi re\,dir\,as:\\
+        \vin --- \glqq{}Ne ebl\,e!\grqq{} ŝi al mi re\,dir\,as:\\
         \glqq{}En tomb\,o mi est\,as ten\,at\,a,\\
         Mi nur en la nokt\,o el\,ir\,as\\
         Al vi, mi\,a sol\,e am\,at\,a!\grqq{}\\
 \end{verse}
 
-\phantomsection
-\addcontentsline{toc}{subsection}{Ho, mia kor’}
-\secthead{Ho, mi\,a kor’.}{0pt}{0pt}
+\mysubsect{Ho, mixa kor’.}
 
 \begin{verse}
-\hspace{1em} Ho, mi\,a kor’, ne bat\,u mal\,trankvil\,e. \\
+\vin Ho, mi\,a kor’, ne bat\,u mal\,trankvil\,e. \\
 El mi\,a brust\,o nun ne salt\,u for! \\
 Jam ten\,i mi\,n ne pov\,as mi facil\,e \\
 Ho, mi\,a kor’! \\
 
 \pstars
 
-\hspace{1em} Ho, mi\,a kor’! Post long\,a labor\,ad\,o \\
+\vin Ho, mi\,a kor’! Post long\,a labor\,ad\,o \\
 Ĉu mi ne venk\,os en decid\,a hor’! \\
 Sufiĉ\,e! trankvil\,iĝ\,u de l’bat\,ad\,o, \\
 Ho, mi\,a kor’! 
 \end{verse}
+
 \begin{center}
 \sectionline
-\vspace{12pt}
 \end{center}
 
-\phantomsection
-\addcontentsline{toc}{section}{III.}
-\hspace*{\fill}\scalebox{2}[1]{\large\cowboyfont{}III.}\hspace*{\fill}
+\mysect{III.}
 
-\vspace{12pt}
-\nopagebreak
 I have now completed my analysis of the more remarkable features of my international language. I have shown the advantages to be derived from a study of it, and proved that its ultimate success is altogether independent of the opinions that may be formed as to its right to the title “international”. For even should the language never come into general use, it gives to every one who \emph{has} learned it, the possibility of being understood by foreigners, if only they be able to read and write. But my tongue has yet another object; not content with internationality, it aims at universality, and aspires to being \emph{spoken} by the majority of educated people. To count on the aid of the public in a scheme of this nature would indeed be to build on a tottering, --- nay rather, an imaginary, --- foundation. The larger part of the public does not care to aid anyone, it prefers to have its wishes gratified without inconvenience to itself. On this account I made my best endeavours to discover some means of accomplishing my object, independently of the help of the public. One of my plans, of which I shall now speak more at large, is a kind of “universal vote”.
 
 If the reader consider all that has been said above, he must come to the conclusion that the study of the international language is practically useful, and completely remunerates the learner for the small amount of trouble he has to expend on it. For my own part, I am naturally wishful that the whole of mankind should take up my language, but I had rather be prepared for the worst, than form too sanguine anticipations. I suppose therefore, that, just at first, very few will consider my language worth the learning, so far as practical usefulness is concerned, and for abstract principles no one will lose even a single hour.
@@ -474,7 +442,7 @@ Author's Address:
 
 If it be found impractical to print works with the diacritical signs ( ˆ, ˘ ), the letter \emph{h} may be substituted for the sign ( ˆ ), and the sign ( ˘ ) may be altogether omitted; but at the beginning of works so printed there should be this note: ``NB ch \texttt{=} ĉ; gh \texttt{=} ĝ; hh \texttt{=} ĥ; jh \texttt{=} ĵ; sh \texttt{=} ŝ.''
 
-When it is necessary to make use of the ``internal'' sign ( \, ) care should be taken that it can not be mistaken for a comma.  Instead of ( \, ) may be printed ( {\relsize{-2.5}$'$} ) or ( $\cdot$ ), e.~g. \emph{sign\,et\,o, sign{\relsize{-2.5}$'$}et{\relsize{-2.5}$'$}o,} or \emph{sign$\cdot$et$\cdot$o}.
+When it is necessary to make use of the ``internal'' sign ( \, ) care should be taken that it can not be mistaken for a comma.  Instead of ( \, ) may be printed ( \textquotesingle{} ) or ( $\cdot$ ), e.~g. \emph{sign\,et\,o, sign\textquotesingle{}et\textquotesingle{}o,} or \emph{sign$\cdot$et$\cdot$o}.
 
 \section*{\scalebox{0.8}[1]B. \hspace{.2em} \scalebox{0.85}{\grammarpartsfont{Parts \hspace{.2em} of \hspace{.2em} Speech.}}}
 
@@ -579,19 +547,17 @@ All forms of the passive are rendered by the respective forms of the verb \emph{
 %
 \kolofono
 
-\small Kvankam mi provis rekrei la 19e-jarcentan \glqq senton\grqq{} de \emph{Unua Libro} tiel fidele kiel eble, mi ne perfekte povis imiti ĉiun tiparon, ornaman lineon, tiparan grandon, ktp.  Ankaŭ:
+\small Kvankam mi provis rekrei la 19e-jarcentan «senton» de \emph{Unua Libro} tiel fidele kiel eble, mi ne perfekte povis imiti ĉiun tiparon, ornaman lineon, tiparan grandon, ktp.  Ankaŭ:
 
 \begin{enumerate}
 
-\item La rezigno per D-ro. Zamenhofo de siaj aŭtoraj rajtoj ne aperas en la angla eldono, kiun mi inspektis; tamen mi elektis aldoni ĝin al la cenzurpaĝo je la komenco, kaj aranĝis ĝin tiel, kiel ĝi estas en la eldonoj de la aliaj lingvoj, por eksponi la karakteron de la viro kaj de la internacia lingvo.
+\item La rezigno per D-ro Zamenhofo de siaj aŭtoraj rajtoj ne aperas en la angla eldono, kiun mi inspektis; tamen mi elektis aldoni ĝin al la cenzurpaĝo je la komenco, kaj aranĝis ĝin tiel, kiel ĝi estas en la eldonoj de la aliaj lingvoj, por eksponi la karakteron de la D-ro kaj de la internacia lingvo.
 
-\item Tiu ĉi eldono ignoras la vorton \glqq{}kian\grqq{}, kiun D-ro. Zamenhofo ŝanĝis al \glqq{}kiam\grqq{} dum la unua jaro post la publikigo de la lingvo, kvankam la originala angla eldono de Geoghegan enhavis ambaŭ formojn; kaj same, por la aliaj korelativoj (tabelvortoj) kiun estis ŝanĝita el \glqq{}-an\grqq{} al \glqq{}-am\grqq{}.
+\item Por klareco, tiu ĉi versio ignoras la vorton «kian», kiun D-ro Zamenhofo ŝanĝis al «kiam» dum la unua jaro (1888) post la publikigo de la lingvo, kaj ankaŭ ignoras la aliaj korelativoj (tabelvortoj) kiun estis ŝanĝita el «-an» al «-am». kvankam la originala angla eldono de Geoghegan (1889) enhavis ambaŭ formojn (ekz. «\emph{kiam (kian)} when»).
 
 \item Mi elektis komposti la libron por A5 papergrando, kiel la plej proksima al la originala.  Tio precipe influas la \emph{Vortaron}, kiu uzis faldatan paĝon en la originala, kiu estas tre pli granda ol la aliaj paĝoj de la libro.
 
 \item Por anglaj vortoj kaj frazoj, mi uzis anglajn citilojn (``kiel ĉi tiuj''), anstataŭ la germanaj (\glqq{}kiel ĉi tiuj\grqq{}) de la originala.  Mi konservis la germanajn citilojn por esperantaj kaj germanaj vortoj kaj frazoj, kaj por la nomo de la lingvo Volap\"{u}k.
-
-\item Mi elektis konservi la komecan signeton (\,), el la ĉefa teksto, kiu signifas paŭzon inter esperantaj morfemoj, kaj uzi ĝin por la \emph{Vortaro}, kiu uzis rektajn apostrofojn ({\relsize{-2.5}{$'$}}) en la originala. Tamen, mi forigis la signon post ĉiu kapvorto en la \emph{Vortaro}, kaj konservis ĝin nur, kiam estas uzita por ekzemploj.
 
 \item Mi silente korektis malgravajn, evidentajn mistajpaĵojn, ekzemple la misliterumado de ``certain'' kiel ``certian'' ĉe la malsupro de paĝo 12 de la originalo.
 
@@ -599,9 +565,7 @@ All forms of the passive are rendered by the respective forms of the verb \emph{
 
 \end{enumerate}
 
-Mi dankas Gene-on KEYES, kies antaŭa PDF de \emph{Unua Libro} estas uzita, kiel la tajpata fundamento de la teksto.  Ĉiuj eraroj aŭ nesufiĉecoj, tamen, estas la miaj.
-
-\vspace{1ex}
+Mi dankas Gene-on KEYES, kies antaŭa PDF de \emph{Unua Libro} estas uzita, kiel la tajpata fundamento de la teksto.  Ĉiuj eraroj aŭ nesufiĉaĵoj, tamen, estas la miaj.\\[1ex]
 
 {\setlength{\parindent}{0em}
 Shawn KNIGHT (angle elparolata \emph{ŝan najt})\\
