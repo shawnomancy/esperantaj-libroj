@@ -12,6 +12,10 @@
 %
 \usepackage{calc}
 
+% tabu
+%
+\usepackage{tabu}
+
 % tiparoj
 %
 
@@ -24,8 +28,13 @@
 % titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
 %
 \renewcommand{\thesection}{\arabic{section}}
-\titleformat{\section}[display]{\centering\large\bf}{}{0pt}{\scalebox{2}[1]}
+\titleformat{\section}[display]{\centering\large\bf}{}{0pt}{\phantomsection\scalebox{2}[1]}
 \titlespacing{\section}{0pt}{1em}{1em}
+
+\newcommand\mysect[1]{%
+\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
 
 % draws the "kajero" box on the title page
 %
@@ -59,3 +68,9 @@
 % differs from that in Unua Libro
 %
 \renewcommand{\,}{\raisebox{-1.1ex}{\relsize{-0.5}{\textquotesingle}}}
+
+% buffer length for Nomaro
+%
+\newlength{\xxx}
+\newcommand\buffer{\hspace*{3em}—\hspace*{3em}}
+\settowidth{\xxx}{\buffer}

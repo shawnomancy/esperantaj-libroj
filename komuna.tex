@@ -162,7 +162,7 @@
 % also letters in the alphabet table at end of book
 %
 \usepackage{tabularx}
-\usepackage{array}
+\usepackage{array,ragged2e}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
 \newcolumntype{Z}{>{\currentrowstyle}}
@@ -170,6 +170,7 @@
 #1\ignorespaces
 }
 
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}m{#1}}
 
 % this bit removes the page number from the chapter start page
 %
