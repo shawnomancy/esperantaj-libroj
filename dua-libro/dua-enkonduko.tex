@@ -27,9 +27,23 @@
 % memoru:
 % titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
 %
+
 \renewcommand{\thesection}{\arabic{section}}
 \titleformat{\section}[display]{\centering\large\bf}{}{0pt}{\phantomsection\scalebox{2}[1]}
 \titlespacing{\section}{0pt}{1em}{1em}
+\titleformat{\chapter}[display]{\centering}{}{0pt}{\cowboyfont\Large}
+
+\newcommand\mychap[1]{%
+\chapter*{\protect\scalebox{2}[1]{\MakeUppercase{#1}}}
+\addcontentsline{toc}{chapter}{#1}
+}
+
+
+\newcommand\mychapbig[1]{%
+\phantomsection
+\chapter*{\protect\scalebox{2}[1]{#1}}
+\addcontentsline{toc}{chapter}{#1}
+}
 
 \newcommand\mysect[1]{%
 \section*{#1}
