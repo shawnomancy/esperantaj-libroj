@@ -73,6 +73,9 @@
 % Pliaj simboloj
 %
 
+% Unuoblaj anglaj citiloj
+\usepackage{textcomp}
+
 % Creative Commons ikonoj
 \usepackage{ccicons}
 
@@ -84,6 +87,13 @@
 
 % la klasika montra fingro, kiu ekkrius "19a jarcento" se ĝi povus
 \usepackage{dingbat}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Trovu / anstataŭigu
+%
+\usepackage{regexpatch}
 
 %
 % Substrekoj kaj litera spaco
@@ -135,15 +145,6 @@
 %
 \usepackage[compact,center]{titlesec}
 \titlespacing*{\chapter}{0pt}{6em}{0pt}
-
-% nice section heading for Patro Nia, etc.
-%
-\newcommand\secthead[3]{%
-\vspace{#2}
-
-{\hfil \scalebox{1.6}[1]{\didone{\bf #1}}}
-
-\vspace{#3}}
 
 % fancy page headers, that is, in imitation of the original
 %
@@ -210,7 +211,7 @@
 % the command for the morpheme-separation stroke
 %
 \renewcommand{\,}{%
-{\relsize{-2.5}\raisebox{-1.35ex}{$'$}}}
+{\relsize{-2.5}\protect\raisebox{-1.35ex}{$'$}}}
 
 % kapliteroj por la Vortaro
 % 
@@ -238,14 +239,18 @@
 \newcommand\kolofono{
 \fancyhead[C]{}
 \titleformat{\chapter}[display]{\centering\sansfont}{\chaptertitlename}{0pt}{\Large}
-\chapter*{KOMENTO PRI KOMPOSTAĴO.}
+\chapter*{KOMENTO PRI KOMPOSTADO.}
 
 \begin{center}
 \rule[0.5ex]{0.5\textwidth}{0.4pt}
 
-\emph{Jen versio \laversio{} de ĉi tiu} \XeLaTeX{} \emph{aranĝaĵo.}
+\emph{Jen versio \laversio{} de ĉi tiu} \XeLaTeX{} \emph{versio.}
 \end{center}
 }
+
+% remove rule at bottom of page
+%
+\renewcommand{\footrulewidth}{0pt}
 
 %
 % Dr. Zamenhof's portrait
