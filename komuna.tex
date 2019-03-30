@@ -96,6 +96,33 @@
 %
 \usepackage{regexpatch}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Tabloj
+%
+
+% granda longa tablo (la "mi ne scias ..." analizo)
+%
+\usepackage{longtable}
+
+% tabu kaj kolonoj
+%
+\usepackage{tabu}
+\usepackage{array,ragged2e}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{Z}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+#1\ignorespaces
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Aliaĵoj
+%
+
 %
 % Substrekoj kaj litera spaco
 % 
@@ -137,9 +164,7 @@
 \usepackage{pdflscape}
 \usepackage{multicol}
 
-% granda longa tablo (la "mi ne scias ..." analizo)
-%
-\usepackage{longtable}
+
 
 % por la longaj krampoj en la "Mi ne scias" tablo, kaj la vortara
 % lineoj de "la" kaj "l'"
@@ -162,18 +187,7 @@
 % remove the rule at top of page
 \renewcommand{\headrulewidth}{0pt}
 
-% tabularx helpos meti la Promesoj, kaj difinas la larĝeco de niaj tabloj
-% 
-% also letters in the alphabet table at end of book
-%
-\usepackage{tabularx}
-\usepackage{array,ragged2e}
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
-\newcolumntype{Z}{>{\currentrowstyle}}
-\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
-#1\ignorespaces
-}
+
 
 \newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}m{#1}}
 
