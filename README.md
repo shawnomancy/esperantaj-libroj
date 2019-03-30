@@ -61,9 +61,9 @@ Pri la tiparoj kiuj ne estas liberaj, mi ne povus trovi bonajn liberajn imitojn 
 
 * Unifraktur Maguntia
 
-[Font Squirrel:](https://www.fontsquirrel.com/)
+[1001 Fonts:](https://www.1001fonts.com/)
 
-* England Hand DB
+* Pinyon Script
 
 [DaFont.com:](https://www.dafont.com/)
 
