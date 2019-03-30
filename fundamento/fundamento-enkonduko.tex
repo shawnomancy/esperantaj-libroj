@@ -1,12 +1,36 @@
 %
-% Preamble for the Fundamento and Ekzerca Libro
+% Enkonduko por la Fundamento
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Tiparoj
 %
 
 % de Google Fonts
-\newfontfamily\brevefont[FakeSlant=1,FakeBold=3.0]{Old Standard TT}
+%
+\newfontfamily\brevefont[FakeSlant=1,FakeBold=0.5]{Old Standard TT}
 \newfontfamily\stdfont{Old Standard TT}
 
 \defaultfontfeatures{Scale=MatchLowercase}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Editorial footnoting
+%
+\usepackage[ruled,perpage]{manyfoot}
+\DeclareNewFootnote{E}[fnsymbol]
+\newcommand\eraro[1]{\footnoteE{Ŝajnerare anstataŭ \emph{#1.}}}
+\newcommand\unuakomon{\footnoteE{%
+La unua eldono de la \emph{Ekzercaro} havis komon ĉi tie.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Speciale por la germana gramatiko
+%
 
 % Fraktur bold
 %
@@ -18,11 +42,110 @@
 \newcommand{\std}[1]{%
 {\relsize{0}{\stdfont{#1}}}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Speciale por la rusa gramatiko
+%
+
+% Esperanto text and morpheme dividers in the Russian grammar
+\newcommand{\es}[1]{{{\textbf{#1}}}}
+\renewcommand{\|}{$|$}
+
+% Stretch bold.  Use for Russian bold words, and for titles
+% in Latin-alphabet grammar sections.
+\newcommand{\br}[1]{\scalebox{1.2}[1]{\textbf{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Speciale por la Ekzercaro
+%
+
+% Ekzercaro section headings
+%
+\newcommand{\myTempSubsect}{\ldots}
+\newcommand{\ekzsec}[2][]{%
+\begin{center}
+\phantomsection
+\narrow{\large #2}
+{\ifthenelse{\equal{#1}{}}{}{\\#1}}
+\end{center}
+{\ifthenelse{\equal{#1}{}}{%
+\addcontentsline{toc}{section}{#2}}{%
+\renewcommand{\myTempSubsect}{#1}
+\xpatchcmd*{\myTempSubsect}{1ex}{}{}{}
+\addcontentsline{toc}{section}{#2 \myTempSubsect}}
+}}
+
+% outdented paragraphs in ekzercaro
+%
+\newenvironment{ekzvocab}[1]
+  {\setlength{\leftskip}{#1}%%
+   \setlength{\parindent}{-#1}%%
+   \vskip 1ex
+     \footnotesize
+  }
+  {\par}
+
+%
+% Handcrafted accents for the script letters in the Ekzercaro.
+%
+
+% dotless j -- need to remove the dot before we drop the circumflex on it!
+%
+\usepackage{stackengine}
+\newcommand{\dotlessj}{ȷ}
+
+% breve -- this font lacks a breve to use.  We defined a breve font
+% above using FakeSlant to give it the desired slant to match our
+% script U/u.
+%
+\newcommand{\scriptbreve}{\Large\brevefont{\u{}}}
+
+% Now the letters.  If you use a different script font, you'll probably
+% need to play with all these numbers. Or maybe you'll have one that
+% just has the accents built in already!
+%
+\newcommand{\scriptC}{\stackinset{c}{2ex}{t}{-1ex}{ˆ}{C}}
+\newcommand{\scriptc}{\stackinset{c}{0.8ex}{b}{0.1ex}{ˆ}{c}}
+\newcommand{\scriptG}{\stackinset{c}{2.1ex}{t}{-1.1ex}{ˆ}{G}}
+\newcommand{\scriptg}{\stackinset{c}{0.9ex}{b}{2.1ex}{ˆ}{g}}
+\newcommand{\scriptH}{\stackinset{c}{2.2ex}{t}{-1.1ex}{ˆ}{H}}
+\newcommand{\scripth}{\stackinset{c}{2ex}{t}{-1.1ex}{ˆ}{h}}
+\newcommand{\scriptJ}{\stackinset{c}{2.4ex}{t}{-1.2ex}{ˆ}{J}}
+\newcommand{\scriptj}{\stackinset{c}{0.9ex}{b}{2.1ex}{ˆ}{\dotlessj}}
+\newcommand{\scriptS}{\stackinset{c}{2.5ex}{t}{-1.3ex}{ˆ}{S}}
+\newcommand{\scripts}{\stackinset{c}{0.9ex}{b}{0.5ex}{ˆ}{s}}
+\newcommand{\scriptU}{\stackinset{c}{-0.3ex}{t}{-0.7ex}{\scriptbreve}{U}}
+\newcommand{\scriptu}{\stackinset{l}{-1ex}{b}{0ex}{\scriptbreve}{u}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Speciale por la Universala Vortaro
+%
+
+% Vortaro headletters
+\newcommand{\uvlitero}[1]{%
+\phantomsection
+{\centering\vskip 1ex\LARGE\bookman{#1}\vskip 1ex\par}
+\addcontentsline{toc}{section}{#1}
+}
+
+% Vortaro entries
+\newcommand{\uventry}[1]{{\csfont{\textbf{#1}}}}
+
+% Vortaro subentries
+\newcommand{\uvsubentry}{\hspace{1em}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{tabu}
+
 % fancy page headers, that is, in imitation of the original
 %
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
 \renewcommand\headrule{}
 \renewcommand\footrule{}
 
@@ -52,37 +175,11 @@
 
 
 % Small rules
-%
 \newcommand{\smallrule}{%
 \begin{center}%
 \rule{13mm}{0.4pt}\end{center}}
 
 \newcommand{\flatsmallrule}{{\centering\rule[0.9ex]{13mm}{0.4pt}\par}}
-
-% Esperanto text and morpheme dividers in the Russian grammar
-%
-\newcommand{\es}[1]{{{\textbf{#1}}}}
-\renewcommand{\|}{$|$}
-
-% Stretch bold.  Use for Russian bold words, and for titles in Latin-alphabet grammar sections.
-%
-\newcommand{\br}[1]{\scalebox{1.2}[1]{\textbf{#1}}}
-
-% Vortaro headletters
-\newcommand{\uvlitero}[1]{{\centering\vskip 1ex\LARGE\bookman{#1}\vskip 1ex\par}}
-
-% Vortaro entries
-\newcommand{\uventry}[1]{{\csfont{\textbf{#1}}}}
-
-% Vortaro subentries
-\newcommand{\uvsubentry}{\hspace{1em}}
-
-% Spacing out or tightening letters
-%
-\sodef\spaceout{}{.2em}{0.6em}{0pt}
-\sodef\spaceoutmed{}{.1em}{0.5em}{0pt}
-\sodef\spaceoutless{}{.05em}{0.4em}{0pt}
-\newcommand{\narrow}[1]{\scalebox{0.8}[1]{#1}}
 
 % Grammar subsection headings (for the three that use 
 % Antiqua letters; also in ekzercaro)
@@ -90,58 +187,41 @@
 \newcommand{\gramsec}[1]{%
 {\chunk{\textbf{\spaceoutless{#1}}}}}
 
-% Ekzercaro section heading
-%
-\newcommand{\ekzsec}[1]{%
-\begin{center}
-\narrow{\large #1}
-\end{center}}
-
-% outdented paragraphs in ekzercaro
-%
-\newenvironment{ekzvocab}[1]
-  {\setlength{\leftskip}{#1}%%
-   \setlength{\parindent}{-#1}%%
-   \vskip 1ex
-     \footnotesize
-  }
-  {\par}
-  
 % wrapfig for the cj/nj definition
 %
 \usepackage{wrapfig}
 
+% titlesec -- better section/chapter headings
 %
-% Handcrafted accents for the script letters in the Ekzercaro.
+% memoru:
+% titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
 %
 
-% dotless j -- need to remove the dot before we drop the circumflex on it!
-%
-\usepackage{stackengine}
-\newcommand{\dotlessj}{\stackinset{c}{0.55ex}{b}{1.85ex}{\color{white}\rule{0.5ex}{0.5ex}}{j}}
+\titleclass{\chapter}{straight}
+\renewcommand{\thesection}{\arabic{section}}
+\titleformat{\section}[display]{\centering\large\bf}{}{0pt}{\phantomsection\scalebox{2}[1]}
+\titlespacing{\section}{0pt}{1em}{1em}
 
-% breve -- this font lacks a breve to use.  We defined a breve font
-% above using FakeSlant to give it the desired slant to match our
-% script U/u.
-%
-\newcommand{\scriptbreve}{\Large\brevefont{\u{}}}
+\titleformat{\chapter}[display]{\centering}{}{0pt}{\Large\bookman}
+\titlespacing{\chapter}{0pt}{1em}{1em}
 
-% Now the letters.  If you use a different script font, you'll probably
-% need to play with all these numbers. Or maybe you'll have one that
-% just has the accents built in already!
-%
-\newcommand{\scriptC}{\stackinset{c}{0.2ex}{b}{0.05ex}{\^{}}{C}}
-\newcommand{\scriptc}{\stackinset{c}{-0.8ex}{b}{-1.1ex}{\^{}}{c}}
-\newcommand{\scriptG}{\stackinset{c}{0ex}{b}{0.05ex}{\^{}}{G}}
-\newcommand{\scriptg}{\stackinset{c}{-1.1ex}{b}{-0.3ex}{\^{}}{g}}
-\newcommand{\scriptH}{\stackinset{c}{0ex}{b}{0.05ex}{\^{}}{H}}
-\newcommand{\scripth}{\stackinset{c}{-0.3ex}{b}{-0.05ex}{\^{}}{h}}
-\newcommand{\scriptJ}{\stackinset{c}{0ex}{b}{0.6ex}{\^{}}{J}}
-\newcommand{\scriptj}{\stackinset{c}{-1ex}{b}{-0.3ex}{\^{}}{\dotlessj}}
-\newcommand{\scriptS}{\stackinset{c}{0.35ex}{b}{0.05ex}{\^{}}{S}}
-\newcommand{\scripts}{\stackinset{c}{-0.9ex}{b}{-0.9ex}{\^{}}{s}}
-\newcommand{\scriptU}{\stackinset{c}{0.25ex}{b}{1.2ex}{\scriptbreve}{U}}
-\newcommand{\scriptu}{\stackinset{c}{-0.6ex}{b}{0ex}{\scriptbreve}{u}}
+\newcommand\mychap[1]{%
+\phantomsection
+\chapter*{#1}
+\addcontentsline{toc}{chapter}{#1}
+}
+
+
+\newcommand\mychapbig[1]{%
+\phantomsection
+\chapter*{\protect\scalebox{2}[1]{#1}}
+\addcontentsline{toc}{chapter}{#1}
+}
+
+\newcommand\mysect[1]{%
+\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
 
 %
 % End of preamble
