@@ -20,6 +20,7 @@
 %
 % Editorial footnoting
 %
+\usepackage{footmisc}
 \usepackage[ruled,perpage]{manyfoot}
 \DeclareNewFootnote{E}[fnsymbol]
 \newcommand\eraro[1]{\footnoteE{Ŝajnerare anstataŭ \emph{#1.}}}
@@ -69,7 +70,8 @@ La unua eldono de la \emph{Ekzercaro} havis komon ĉi tie.}}
 \begin{center}
 \phantomsection
 \narrow{\large #2}
-{\ifthenelse{\equal{#1}{}}{}{\\#1}}
+{\ifthenelse{\equal{#1}{}}{}{\vskip 1ex
+{#1}}}
 \end{center}
 {\ifthenelse{\equal{#1}{}}{%
 \addcontentsline{toc}{section}{#2}}{%
@@ -181,8 +183,7 @@ La unua eldono de la \emph{Ekzercaro} havis komon ĉi tie.}}
 % Grammar subsection headings (for the three that use 
 % Antiqua letters; also in ekzercaro)
 %
-\newcommand{\gramsec}[1]{%
-{\chunk{\textbf{\spaceoutless{#1}}}}}
+\newcommand{\gramsec}[1]{{\chunk{\br{#1}}}}
 
 % wrapfig for the cj/nj definition
 %
