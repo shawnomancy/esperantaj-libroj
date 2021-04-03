@@ -2,23 +2,24 @@
 % Enkonduko speciala por Dua Libro
 %
 
-% need German-style quotes
+% Ni bezonas germanajn citaĵojn
 % 
 \usepackage{csquotes}
 \MakeOuterQuote{"}
 \setquotestyle{german}
 
-% calculations
+% kalkuloj
 %
 \usepackage{calc}
 
-% tiparoj
+%
+% TIPAROJ
 %
 
-% el dafont
+% ... el dafont
 \newfontfamily\latino{MkLatinoPlain}[LetterSpace=20]
 
-% titlesec -- better section/chapter headings
+% titlesec -- pli bonaj titoloj por ĉapitroj kaj sekcioj
 %
 % memoru:
 % titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
@@ -46,7 +47,7 @@
 \addcontentsline{toc}{section}{#1}
 }
 
-% draws the "kajero" box on the title page
+% Tiu desegnas la "kajero" skatolon sur la titolopaĝo
 %
 \newcommand{\kajerobox}{%
 \begin{tikzpicture}[every node/.style={inner sep=0pt}]
@@ -74,12 +75,12 @@
 \filldraw(K) circle [radius=1.25pt];
 \end{tikzpicture}}
 
-% the command for the morpheme-separation stroke 
-% differs from that in Unua Libro
+% La komando por la intermorfema streko. 
+% Ne la sama kiel la komando en Unua Libro
 %
 \renewcommand{\,}{\raisebox{-1.1ex}{\relsize{-0.5}{\textquotesingle}}}
 
-% buffer length for Nomaro
+% bufro por Nomaro
 %
 \newlength{\xxx}
 \newcommand\buffer{\hspace*{3em}—\hspace*{3em}}
