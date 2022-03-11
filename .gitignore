@@ -3,6 +3,7 @@
 *.log
 *.aux
 *.out
+*.synctex.gz
 
 # ignore the actual generated PDFs
 #
