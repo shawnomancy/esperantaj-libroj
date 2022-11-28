@@ -12,9 +12,9 @@
 
 {\small
 \begin{flushright}
-\begin{tabu} to \textwidth{X@{}r}
+\begin{tblr}{Xr}
 ANTAŬPAROLO \dotfill & \pageref{antau} \\
-\end{tabu}
+\end{tblr}
 \end{flushright}
 
 \vspace{1em}
@@ -25,21 +25,23 @@ FUNDAMENTA GRAMATIKO \fauxsc{de la} LINGVO ESPERANTO \\
 
 \vspace{1em}
 
+\newlength{\gramlen}
+\settowidth{\gramlen}{Gramatiko}
 \begin{flushright}
-\begin{tabu} to 0.9\textwidth{l@{ }l@{}c@{ }X@{}r}
-\fauxsc{Grammaire} & ( & Gramatiko & Franca) \dotfill & \pageref{gram:franca} \\
-\fauxsc{Grammar} & ( & — & Angla) \dotfill & \pageref{gram:angla} \\
-\fauxsc{Grammatik} & ( & — & Germana) \dotfill & \pageref{gram:germana} \\
-\fauxsc{Грамматика} & ( & — & Rusa) \dotfill & \pageref{gram:rusa} \\
-\fauxsc{Gramatyka} & ( & — & Pola) \dotfill & \pageref{gram:pola} \\
-\end{tabu}
+\begin{tblr}{lXr}
+\fauxsc{Grammaire} & (Gramatiko Franca) \dotfill & \pageref{gram:franca} \\
+\fauxsc{Grammar} & (\makebox[\gramlen][c]{—} Angla) \dotfill & \pageref{gram:angla} \\
+\fauxsc{Grammatik} & (\makebox[\gramlen][c]{—} Germana) \dotfill & \pageref{gram:germana} \\
+\fauxsc{Грамматика} & (\makebox[\gramlen][c]{—} Rusa) \dotfill & \pageref{gram:rusa} \\
+\fauxsc{Gramatyka} & (\makebox[\gramlen][c]{—} Pola) \dotfill & \pageref{gram:pola} \\
+\end{tblr}
 \end{flushright}
 
 \begin{flushright}
-\begin{tabu} to \textwidth{X@{}r}
+\begin{tblr}{Xr}
 EKZERCARO \dotfill & \pageref{ekzercaro} \\
 UNIVERSALA VORTARO \dotfill & \pageref{vortaro} \\
-\end{tabu}
+\end{tblr}
 \end{flushright}
 
 } % end "small" before the antaŭparolo

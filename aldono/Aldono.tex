@@ -17,7 +17,7 @@
 
 % Versia nombro
 %
-\newcommand{\laversio}{0.93}
+\newcommand{\laversio}{0.95}
 
 \input{../komuna.tex}
 \input{aldono-enkonduko.tex}
@@ -126,55 +126,38 @@ Tiu ĉi libreto estas la lasta vorto, kiun mi elparolas en rolo de aŭtoro. De t
 \footnotesize
 \setlength{\arrayrulewidth}{0.05pt}
 
-\begin{tabu} to \textwidth{m{5ex}>{\raggedleft\arraybackslash}p{3ex}@{~~}X@{\hspace{1em}}m{3ex}}
+\begin{tblr}{
+  colspec={crXcc},
+  column{2}={valign=h},
+  column{3}={valign=f},
+  column{4}={valign=f},
+  stretch=0,
+}
+\SetCell[r=18]{c} \rotatebox{90}{\lbOne} & 
+\SetCell[c=3]{c} {\scalebox{1.6}[1]{\didone{\normalsize \bf NOM\,AR\,O}} \\ de l' verk\,o\,j pri la lingv\,o inter\,naci\,a (Esperanta),\\ kiu\,j el\,ir\,is ĝis Juni\,o 1888.} & & & 
+\SetCell[r=18]{c} \rotatebox{90}{\lbTwo} \\
+ & & & \didone{\textbf{Kosto:}} & \\
+ & 1) & Международный языкъ Преди\-словіе и полный \newline учебникъ. (Lingv\,o inter\,naci\,a. El\,don\,o por \textit{Rus\,o\,j}) \Dotfill & 15 kopek\,o\,j. & \\
+ & 2) & J\k{e}zyk mi\k{e}dzynarodowy. Przedmowa i  podr\k{e}cznik kompletny. (Lingv\,o inter\,\-naci\,a. El\,don\,o por \textit{Pol\,o\,j}) \Dotfill & 15 kopek\,o\,j. & \\
+ & 3) & Langue internationale. Préface et manuel complet. (Lingv\,o inter\,naci\,a. El\,don\,o por \textit{Franc\,o\,j}) \Dotfill & 50 centim\,o\,j. &\\
+ & 4) & Internationale Sprache. Vor\-rede und vollständ\-iges Lehr\-buch. (Lingv\,o inter\,\-naci\,a. El\,don\,o por \textit{German\,o\,j}) \Dotfill & 40 pfenig\,o\,j. &\\
+ & 5) & International tongue. Preface and complete  method.  (Lingv\,o inter\,naci\,a. El\,don\,o por \textit{Angl\,o\,j}) \Dotfill & 5 penc\,o\,j. &\\
 
-\multirow{31}{*}{\rotatebox{90}{\lbOne}} &
-\multicolumn{2}{p{\dimexpr \tabucolX+1em+3ex}}{\centering \scalebox{1.6}[1]{\didone{\normalsize \bf NOM\,AR\,O}}} &
-\multirow{31}{*}{\rotatebox{90}{\lbTwo}} \\
+& 6) & Vort\,ar\,o por Rus\,o\,j \Dotfill & 3 kopek\,o\,j. & \\
+& 7) & Vort\,ar\,o por Pol\,o\,j \Dotfill & 3 kopek\,o\,j. & \\
+& 8) & Vort\,ar\,o por Franc\,o\,j \Dotfill & 7 centim\,o\,j. & \\
+& 9) & Vort\,ar\,o por German\,o\,j \Dotfill & 6 pfenig\,o\,j. & \\
+& 10) & Vort\,ar\,o por Angl\,o\,j \Dotfill & 1 penc\,o. & \\
+& 11) & {\didone\textbf{Du\,a libr\,o de l' lingv\,o inter\,\-na\-ci\,\-a. Kajer\,o Nr. 1.}} \Dotfill & 25 kopek\,o\,j. &\\
+& 12) & Al\,don\,o al la Du\,a Libr\,o de l' Lingv\,o Inter\,naci\,a \Dotfill & 10 kopek\,o\,j. & \\
+ & \SetCell[c=3]{j} {{\large\HandCuffRight{}} Ĉiu\,j supr\,e skrib\,it\,a\,j verk\,o\,j pov\,as est\,i ricev\,at\,a\,j \\ en ĉia libr\,ej\,o kaj ankaŭ ĉe \sansfontclose{\textit{D-r\,\thinspace{}o L. Zamenhof' en Varsovi\,\thinspace{}o.}} } & \\
+& \SetCell[c=3]{c} Adreso: \scalebox{0.9}[1]{\didone{\textbf{Dr. L. Samenhof}}} a \scalebox{0.9}[1]{\didone{\textbf{Varsovie}}} (Rus. Pol.) & \\
+\hline
+& \SetCell[c=3]{c} \scriptsize Дозволено Цензурою. Варшава, 6 Іюня 1889 г. & \\
+\hline
+ & \SetCell[c=3]{c} \scriptsize \bf Presejo de Ĥ. Kelter, Varsovio, strato Nowolipie N. 11. & \\
 
- & \multicolumn{2}{p{\dimexpr \tabucolX+1em+3ex}}{\small \centering de l' verk\,o\,j pri la lingv\,o inter\,naci\,a (Esperanta), 
-\newline kiu\,j el\,ir\,is ĝis Juni\,o 1888.} & \\
-
- & & \hfill \didone{\textbf{Kosto:}} & \\
-
- & 1) &
-Международный языкъ Преди\-словіе и полный \newline учебникъ. (Lingv\,o inter\,naci\,a. El\,don\,o por \newline \textit{Rus\,o\,j}) \dotfill 15 kopek\,o\,j. & \\
-
-& 2) & 
-J\k{e}zyk mi\k{e}dzynarodowy. Przedmowa i  podr\k{e}cznik \newline kompletny. (Lingv\,o inter\,\-naci\,a. El\,don\,o por \newline \textit{Pol\,o\,j}) \dotfill 15 kopek\,o\,j. & \\
-
-& 3) & 
-Langue internationale. Préface et manuel com- \newline plet. (Lingv\,o inter\,naci\,a. El\,don\,o por \newline \textit{Franc\,o\,j}) \dotfill 50 centim\,o\,j. &\\
-
-& 4) & 
-Internationale Sprache. Vor\-rede und vollständ- \newline iges Lehr\-buch. (Lingv\,o inter\,\-naci\,a. \newline El\,don\,o por \textit{German\,o\,j}) \dotfill 40 pfenig\,o\,j. &\\
-
-& 5) & 
-International tongue. Preface and complete  me- \newline thod.  (Lingv\,o inter\,naci\,a. El\,don\,o por \newline \textit{Angl\,o\,j}) \dotfill 5 penc\,o\,j. &\\
-
-& 6) & Vort\,ar\,o por Rus\,o\,j \dotfill 3 kopek\,o\,j. & \\
-& 7) & Vort\,ar\,o por Pol\,o\,j \dotfill 3 kopek\,o\,j. & \\
-& 8) & Vort\,ar\,o por Franc\,o\,j \dotfill 7 centim\,o\,j. & \\
-& 9) & Vort\,ar\,o por German\,o\,j \dotfill 6 pfenig\,o\,j. & \\
-& 10) & Vort\,ar\,o por Angl\,o\,j \dotfill 1 penc\,o. & \\
-
-& 11) & {\didone\textbf{Du\,a libr\,o de l' lingv\,o inter\,\-na\-ci\,\-a. \newline Kajer\,o Nr. 1.}} \dotfill 25 kopek\,o\,j. &\\
-
-& 12) & Al\,don\,o al la Du\,a Libr\,o de l' Lingv\,o \newline Inter\,naci\,a \dotfill 10 kopek\,o\,j. & \\
-
-& \multicolumn{2}{p{\dimexpr \tabucolX+1em}}{{\large\HandCuffRight{}} Ĉiu\,j supr\,e skrib\,it\,a\,j verk\,o\,j pov\,as est\,i ricev\,at\,a\,j en ĉia libr\,ej\,o kaj ankaŭ ĉe \sansfontclose{\textit{D-r\,\thinspace{}o L. Zamenhof' en Varsovi\,\thinspace{}o.}}} & \\
-
-& \multicolumn{2}{p{\dimexpr \tabucolX+1em}}{\centering Adreso: \scalebox{0.9}[1]{\didone{\textbf{Dr. L. Samenhof}}} a \scalebox{0.9}[1]{\didone{\textbf{Varsovie}}} (Rus. Pol.)} & \\[1ex]
-
-\cline{2-3}\\[-2ex]
-
-& \multicolumn{2}{p{\dimexpr \tabucolX+1em+3ex}}{\centering\scriptsize Дозволено Цензурою. Варшава, 6 Іюня 1889 г.} & \\[1ex]
-
-\cline{2-3}\\[-2ex]
-
-& \multicolumn{2}{p{\dimexpr \tabucolX+1em+3ex}}{\centering\scriptsize \bf Presejo de Ĥ. Kelter, Varsovio, strato Nowolipie N. 11.} & \\
-
-\end{tabu}
+\end{tblr}
 
 \end{center}
 \restoregeometry

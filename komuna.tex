@@ -102,22 +102,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %
-% Tabloj
+% Tabeloj
 %
 
-% granda longa tablo (la "mi ne scias ..." analizo)
+% tabularray kaj kolonoj
 %
-\usepackage{longtable}
-
-% tabu kaj kolonoj
-%
-\usepackage{tabu}
+\usepackage{tabularray}
 \usepackage{array,ragged2e}
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
-\newcolumntype{Z}{>{\currentrowstyle}}
-\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
-#1\ignorespaces
+\NewColumnType{Y}[1][]{Q[c,co=1,#1]}
+
+%
+% temo por simplaj tabeloj
+%
+\NewTblrTheme{plain}{
+\DefTblrTemplate{contfoot-text}{blank}{}
+\SetTblrTemplate{contfoot-text}{blank}
+\DefTblrTemplate{conthead-text}{blank}{}
+\SetTblrTemplate{conthead-text}{blank}
+\DefTblrTemplate{caption-tag}{default}{}
+\DefTblrTemplate{caption-sep}{default}{}
+\DefTblrTemplate{caption-text}{default}{}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -174,8 +178,6 @@
 %
 \usepackage{pdflscape}
 \usepackage{multicol}
-
-
 
 % por la longaj krampoj en la "Mi ne scias" tablo, kaj la vortara
 % lineoj de "la" kaj "l'"
