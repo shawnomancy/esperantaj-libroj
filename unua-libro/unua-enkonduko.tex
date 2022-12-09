@@ -186,19 +186,23 @@ Mi, sub\,skrib\,it\,a, pro\-mes\,as el\,ler\-n\,i la pro\-pon\,it\,a\,n de d-r\,
 \addcontentsline{toc}{section}{#1}
 }
 
-% the subsections will contain the letter "x" as a code.  remove those in the TOC
-% but turn them into morpheme commas in the print
 %
-\newcommand{\myTempSubsect}{\ldots}
+%
+%\titlespacing*{\subsection}{0pt}{\baselineskip}{0.5\baselineskip}
 \newcommand\mysubsect[1]{%
-\renewcommand\myTempSubsect{#1}
-\xpatchcmd*{\myTempSubsect}{x}{}{}{}
-\phantomsection
-\addcontentsline{toc}{subsection}{\myTempSubsect}
-\renewcommand\myTempSubsect{#1}
-\xpatchcmd*{\myTempSubsect}{x}{\,}{}{}
-\subsection*{\scalebox{1.6}[1]{\myTempSubsect}}
+\subsection*{\scalebox{1.6}[1]{#1}}
 }
+
+\newcommand{\myTempSubsect}{\ldots}
+%\newcommand\mysubsect[1]{%
+%\renewcommand\myTempSubsect{#1}
+%\xpatchcmd*{\myTempSubsect}{x}{}{}{}
+%\phantomsection
+%\addcontentsline{toc}{subsection}{\myTempSubsect}
+%\renewcommand\myTempSubsect{#1}
+%\xpatchcmd*{\myTempSubsect}{x}{\,}{}{}
+%\subsection*{\scalebox{1.6}[1]{\myTempSubsect}}
+%}
 
 % section headings for gramatiko.  need to expand spaces 
 % between words for the display because rescaling kills them
