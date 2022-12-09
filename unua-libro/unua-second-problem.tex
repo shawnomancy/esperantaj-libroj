@@ -8,42 +8,51 @@ The solution of the second problem was effected thus:
 
 I hold out to one of the strangers an International--English vocabulary, and point to the title, where the following sentence appears in large letters: “Everything written in the international language can be translated by the help of this vocabulary. If several words together express but a single idea, they are written as one word, but separated by commas; e.~g., \emph{frat\,in\,o}, though a single idea is yet composed of three words which must be looked for separately in the vocabulary”. If my companion has never heard of the international language he will probably favour me at first with a vacant stare, will then take the paper offered to him, and searching for the words in the vocabulary, as directed, will make out something of this kind:
 
+
+
 \begingroup
-\smaller
+\footnotesize
 \renewcommand{\arraystretch}{1}
-\begin{longtblr}{>{\itshape}c@{ }l@{ }>{\itshape}l>{\ttfamily}l@{ }p{4cm}@{ }l@{ }c}
+\begin{longtblr}[theme=plain,label=none]{
+  colspec={cclclcc},
+  columns={rightsep=0.5ex},
+  column{1}={font=\itshape},
+  column{2}={leftsep=0ex},
+  column{3}={font=\itshape},
+  stretch=0,
+}
 
 Mi & \tlba & mi & = & I & \trba & I \\
 
 ne & \tlba & ne & = & not & \trba & not \\
 
-\SetCell[r=2]{l} sci\,as & \tlbb & sci & = & know & \trbb & \SetCell[r=2]{l} do know \\
+\SetCell[r=2]{c} sci\,as & \SetCell[r=2]{c} \tlbb & sci & = & know & \SetCell[r=2]{c} \trbb & \SetCell[r=2]{c} do know \\
  & & as & = & sign of the present tense \\
  
 kie & \tlba & kie & = & where & \trba & where \\
 
 mi & \tlba & mi & = & I & \trba & I \\
 
-\SetCell[r=2]{l} las\,is & \tlbb & las & = & leave & \trbb & \SetCell[r=2]{l} have left \\
+\SetCell[r=2]{c} las\,is & \SetCell[r=2]{c} \tlbb & las & = & leave & \SetCell[r=2]{c} \trbb & \SetCell[r=2]{c} have left \\
  & & is & = & sign of the past tense \\
  
 la & \tlba & la & = & the & \trba & the \\
 
-\SetCell[r=3]{l} baston\,o\,n; & \tlbc & baston & = & stick & \trbc & \SetCell[r=3]{l} stick; \\
+\SetCell[r=3]{c} baston\,o\,n; & \SetCell[r=3]{c} \tlbc & baston & = & stick & \SetCell[r=3]{c} \trbc & \SetCell[r=3]{c} stick; \\
  & & o & = & sign of a substantive \\
  & & n & = & sign of the objective case \\
  
-\SetCell[r=2]{l} ĉu & \tlbb & ĉu & = & whether, if, & \trbb & \SetCell[r=2]{l} whether \\
+\SetCell[r=2]{c} ĉu & \SetCell[r=2]{c} \tlbb & ĉu & = & whether, if, & \SetCell[r=2]{c} \trbb & \SetCell[r=2]{c} whether \\
  & & & & employed in questions & & \\
 
 vi & \tlba & vi & = & you, thou & \trba & you \\
 
-\SetCell[r=2]{l} ĝi\,n & \tlbb & ĝi & = & it, this & \trbb & \SetCell[r=2]{l} it \\
+\SetCell[r=2]{c} ĝi\,n & \SetCell[r=2]{c} \tlbb & ĝi & = & it, this & \SetCell[r=2]{c} \trbb & \SetCell[r=2]{c} it \\
  & & n & = & sign of the objective case \\
  
 ne & \tlba & ne & = & not & \trba & not \\
 
-\SetCell[r=2]{l} vid\,is? & \tlbb & vid & = & see & \trbb & \SetCell[r=2]{l} have seen? \\
+\SetCell[r=2]{c} vid\,is? & \SetCell[r=2]{c} \tlbb & vid & = & see & \SetCell[r=2]{c} \trbb & \SetCell[r=2]{c} have seen? \\
  & & is & = & sign of the past tense \\
  
 \end{longtblr}
