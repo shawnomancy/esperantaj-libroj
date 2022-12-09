@@ -324,8 +324,8 @@
 }
 \def\Hscale{.83}\def\Vscale{.72}\def\Cscale{1.00}
 \def\fauxschelphelp#1#2\relax{%
-  \ifnum`#1>``\ifnum`#1<`\{\scalebox{\Hscale}[\Vscale]{\uppercase{#1}}\else%
-    \scalebox{\Cscale}[1]{#1}\fi\else\scalebox{\Cscale}[1]{#1}\fi%
+  \ifnum`#1=\lccode`#1\relax\scalebox{\Hscale}[\Vscale]{\char\uccode`#1}\else%
+    \scalebox{\Cscale}[1]{#1}\fi%
   \ifx\relax#2\relax\else\fauxschelphelp#2\relax\fi}
 
 % Ligiloj, kaj ilia koloro 
