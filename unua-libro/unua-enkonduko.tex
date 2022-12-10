@@ -187,31 +187,19 @@ Mi, sub\,skrib\,it\,a, pro\-mes\,as el\,ler\-n\,i la pro\-pon\,it\,a\,n de d-r\,
 }
 
 %
-%
-%\titlespacing*{\subsection}{0pt}{\baselineskip}{0.5\baselineskip}
 \newcommand\mysubsect[1]{%
 \subsection*{\scalebox{1.6}[1]{#1}}
 }
 
-\newcommand{\myTempSubsect}{\ldots}
-%\newcommand\mysubsect[1]{%
-%\renewcommand\myTempSubsect{#1}
-%\xpatchcmd*{\myTempSubsect}{x}{}{}{}
-%\phantomsection
-%\addcontentsline{toc}{subsection}{\myTempSubsect}
-%\renewcommand\myTempSubsect{#1}
-%\xpatchcmd*{\myTempSubsect}{x}{\,}{}{}
-%\subsection*{\scalebox{1.6}[1]{\myTempSubsect}}
-%}
-
-% section headings for gramatiko.  need to expand spaces 
-% between words for the display because rescaling kills them
+% section headings for gramatiko.
 %
+\newcommand\myTempSubsect{\ldots}
 \newcommand\gramsect[2]{%
+\phantomsection
+\addcontentsline{toc}{section}{#2}%
 \renewcommand\myTempSubsect{#2}
 \xpatchcmd*{\myTempSubsect}{ }{\hspace{1ex}}{}{}
-\section*{\narrow{\Large #1.} \hspace{.2em} \narrow{\large\grammarpartsfont \myTempSubsect{}.}}
-\addcontentsline{toc}{section}{#2}
+\section*{\narrow{\Large #1.} \hspace{.2em} \large\grammarpartsfont \myTempSubsect{}.}
 }
 
 % use english by default
